@@ -3,11 +3,43 @@
    Las Vegas, NV • 906 S 6th St #105
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700;800;900&family=Oswald:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bebas+Neue&family=Cinzel:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700;800;900&family=Oswald:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap');
 
 /* --------------------------------------------------------------------------
-   1. COLOR PALETTES (6 FULL-SURFACE PALETTES)
+   1. COLOR PALETTES (7 FULL-SURFACE PALETTES)
    -------------------------------------------------------------------------- */
+
+/* Palette 1940s: Vintage Traditional Barber Pole (Crimson Red, Barber White, Cobalt Navy) */
+[data-palette="vintage-1940s-barber"] {
+  --bg-main: #0c1017;
+  --bg-secondary: #131924;
+  --bg-card: #182232;
+  --bg-card-hover: #222f46;
+  --accent: #dc2626;
+  --accent-secondary: #2563eb;
+  --accent-light: #ef4444;
+  --accent-dark: #991b1b;
+  --accent-glow: rgba(220, 38, 38, 0.35);
+  --accent-gradient: linear-gradient(135deg, #dc2626 0%, #ffffff 50%, #2563eb 100%);
+  --text-primary: #ffffff;
+  --text-secondary: #cbd5e1;
+  --text-dim: #94a3b8;
+  --border-color: rgba(220, 38, 38, 0.35);
+  --border-subtle: rgba(37, 99, 235, 0.25);
+  --btn-text: #ffffff;
+  --nav-bg: rgba(12, 16, 23, 0.95);
+  --nav-border: rgba(220, 38, 38, 0.3);
+  --hero-overlay: linear-gradient(180deg, rgba(12, 16, 23, 0.7) 0%, rgba(12, 16, 23, 0.9) 65%, #0c1017 100%);
+  --card-shadow-default: 0 15px 35px -5px rgba(0, 0, 0, 0.75), 0 0 0 1px rgba(220, 38, 38, 0.2);
+}
+
+[data-palette="vintage-1940s-barber"] body {
+  background-color: #0c1017;
+  background-image: 
+    radial-gradient(circle at 50% 0%, rgba(220, 38, 38, 0.12) 0%, transparent 50%),
+    radial-gradient(circle at 100% 50%, rgba(37, 99, 235, 0.09) 0%, transparent 40%),
+    radial-gradient(circle at 0% 80%, rgba(220, 38, 38, 0.09) 0%, transparent 40%);
+}
 
 /* Palette 0: Obsidian Champagne (Deep Velvet Noir & Liquid Champagne Gold) */
 [data-palette="obsidian-champagne"] {
@@ -463,6 +495,144 @@
   backdrop-filter: blur(12px) !important;
   border: 1px solid rgba(229, 192, 123, 0.3) !important;
   background: rgba(229, 192, 123, 0.08) !important;
+}
+
+/* 6. VINTAGE 1940s HERITAGE ('Abril Fatface' + 'Bebas Neue', Iconic Barber Pole Striping, Retro Americana) */
+[data-style="vintage-1940s-heritage"] {
+  --font-heading: 'Abril Fatface', 'Playfair Display', serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+  --heading-transform: uppercase;
+  --heading-weight: 400;
+  --heading-letter-spacing: 0.04em;
+  --card-radius: 8px;
+  --badge-radius: 4px;
+  --btn-radius: 4px;
+  --border-width: 2px;
+}
+
+[data-style="vintage-1940s-heritage"] h1 {
+  font-family: 'Abril Fatface', 'Playfair Display', serif !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.03em !important;
+  line-height: 1.12 !important;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.8), 0 0 20px rgba(220, 38, 38, 0.4) !important;
+}
+
+[data-style="vintage-1940s-heritage"] h2,
+[data-style="vintage-1940s-heritage"] h3 {
+  font-family: 'Bebas Neue', 'Oswald', sans-serif !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
+}
+
+/* Iconic Swirling Barber Pole Header Strip */
+[data-style="vintage-1940s-heritage"] header::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 6px;
+  background: repeating-linear-gradient(
+    -45deg,
+    #dc2626 0px,
+    #dc2626 14px,
+    #ffffff 14px,
+    #ffffff 28px,
+    #2563eb 28px,
+    #2563eb 42px,
+    #ffffff 42px,
+    #ffffff 56px
+  );
+  background-size: 80px 100%;
+  animation: barberPoleStripScroll 2.5s linear infinite;
+}
+
+@keyframes barberPoleStripScroll {
+  from { background-position: 0 0; }
+  to { background-position: 80px 0; }
+}
+
+/* Authentic 1940s Double-Framed Americana Cards */
+[data-style="vintage-1940s-heritage"] .card-luxury,
+[data-style="vintage-1940s-heritage"] .card-surface,
+[data-style="vintage-1940s-heritage"] .service-card,
+[data-style="vintage-1940s-heritage"] .barber-card {
+  border: 2px solid #dc2626 !important;
+  border-radius: 8px !important;
+  background: #182232 !important;
+  box-shadow: 0 12px 28px -5px rgba(0, 0, 0, 0.8), inset 0 0 0 1px rgba(37, 99, 235, 0.45) !important;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease !important;
+}
+
+[data-style="vintage-1940s-heritage"] .card-luxury::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: repeating-linear-gradient(
+    -45deg,
+    #dc2626 0px,
+    #dc2626 10px,
+    #ffffff 10px,
+    #ffffff 20px,
+    #2563eb 20px,
+    #2563eb 30px,
+    #ffffff 30px,
+    #ffffff 40px
+  );
+}
+
+[data-style="vintage-1940s-heritage"] .card-luxury:hover {
+  transform: translateY(-6px) !important;
+  border-color: #ef4444 !important;
+  box-shadow: 0 20px 40px -5px rgba(0, 0, 0, 0.9), 0 0 20px rgba(220, 38, 38, 0.3), inset 0 0 0 1px rgba(37, 99, 235, 0.7) !important;
+}
+
+/* 1940s Classic Barber Bold Action Buttons */
+[data-style="vintage-1940s-heritage"] button:not(#theme-demo-toolbar button),
+[data-style="vintage-1940s-heritage"] .open-booking-trigger,
+[data-style="vintage-1940s-heritage"] .btn-primary {
+  border-radius: 4px !important;
+  font-family: 'Bebas Neue', 'Oswald', sans-serif !important;
+  font-size: 16px !important;
+  letter-spacing: 0.09em !important;
+  text-transform: uppercase !important;
+  background: #dc2626 !important;
+  color: #ffffff !important;
+  border: 1px solid #ffffff !important;
+  box-shadow: 3px 3px 0px 0px #2563eb !important;
+  transition: all 0.2s ease !important;
+}
+
+[data-style="vintage-1940s-heritage"] .open-booking-trigger:hover,
+[data-style="vintage-1940s-heritage"] .btn-primary:hover {
+  transform: translate(-1px, -1px) !important;
+  box-shadow: 4px 4px 0px 0px #2563eb !important;
+  background: #ef4444 !important;
+}
+
+/* 1940s Vintage Badges */
+[data-style="vintage-1940s-heritage"] .theme-badge {
+  border-radius: 4px !important;
+  border: 1px solid #dc2626 !important;
+  background: #182232 !important;
+  color: #ffffff !important;
+}
+
+[data-style="vintage-1940s-heritage"] .shop-monogram {
+  font-family: 'Abril Fatface', serif !important;
+  color: #ffffff !important;
+}
+
+[data-style="vintage-1940s-heritage"] .shop-badge {
+  border-color: #2563eb !important;
+  background: #2563eb !important;
+  color: #ffffff !important;
+  border-radius: 3px !important;
 }
 
 /* --------------------------------------------------------------------------
