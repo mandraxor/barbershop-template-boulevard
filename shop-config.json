@@ -1,8 +1,8 @@
 {
   "theme": "dark-gold",
   "design": {
-    "palette": "urban-midnight",
-    "style": "urban-brutalist",
+    "palette": "obsidian-champagne",
+    "style": "atelier-couture",
     "enableDemoToolbar": false
   },
   "business": {
@@ -10,8 +10,8 @@
     "shortName": "Boulevard Barbershop",
     "monogram": "BBS",
     "badge": "LV",
-    "tagline": "Precision Cuts & Classic Shaves on Historic 6th Street.",
-    "subTagline": "Downtown Las Vegas Traditional & Modern Grooming Lounge",
+    "tagline": "Mastery in Every Cut. Artistry in Every Shave.",
+    "subTagline": "Downtown Las Vegas Luxury Barber Atelier",
     "description": "Boulevard Barber Shop is Downtown Las Vegas premier traditional and modern grooming lounge located at 906 S 6th St. Specializing in precision skin fades, beard shaping, hot towel straight-razor shaves, and clean scissor cuts.",
     "phone": "(702) 384-1453",
     "phoneRaw": "7023841453",
@@ -36,8 +36,8 @@
     "shortName": "Boulevard Barbershop",
     "monogram": "BBS",
     "badge": "LV",
-    "tagline": "Precision Cuts & Classic Shaves on Historic 6th Street.",
-    "subTagline": "Downtown Las Vegas Traditional & Modern Grooming Lounge",
+    "tagline": "Mastery in Every Cut. Artistry in Every Shave.",
+    "subTagline": "Downtown Las Vegas Luxury Barber Atelier",
     "description": "Boulevard Barber Shop is Downtown Las Vegas premier traditional and modern grooming lounge located at 906 S 6th St. Specializing in precision skin fades, beard shaping, hot towel straight-razor shaves, and clean scissor cuts.",
     "phone": "(702) 384-1453",
     "phoneRaw": "7023841453",
