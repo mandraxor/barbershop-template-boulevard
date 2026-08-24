@@ -1,8 +1,8 @@
 {
   "theme": "dark-gold",
   "design": {
-    "palette": "speakeasy-heritage",
-    "style": "classic-speakeasy",
+    "palette": "urban-midnight",
+    "style": "urban-brutalist",
     "enableDemoToolbar": false
   },
   "business": {
