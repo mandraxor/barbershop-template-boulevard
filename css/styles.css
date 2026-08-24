@@ -41,6 +41,38 @@
     radial-gradient(circle at 0% 80%, rgba(220, 38, 38, 0.09) 0%, transparent 40%);
 }
 
+/* Palette: Gents Place & Barbershop LV Hybrid (Whiskey Noir & Aged Brass) */
+[data-palette="gents-whiskey-noir"] {
+  --bg-main: #0b0d12;
+  --bg-secondary: #121620;
+  --bg-card: rgba(18, 24, 35, 0.85);
+  --bg-card-hover: rgba(26, 35, 52, 0.95);
+  --accent: #d4af37;
+  --accent-secondary: #e5c07b;
+  --accent-light: #f3e5ab;
+  --accent-dark: #997a15;
+  --accent-glow: rgba(212, 175, 55, 0.4);
+  --accent-gradient: linear-gradient(135deg, #f3e5ab 0%, #d4af37 50%, #8b6f1a 100%);
+  --text-primary: #ffffff;
+  --text-secondary: #cbd5e1;
+  --text-dim: #94a3b8;
+  --border-color: rgba(212, 175, 55, 0.3);
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --btn-text: #0b0d12;
+  --nav-bg: rgba(11, 13, 18, 0.94);
+  --nav-border: rgba(212, 175, 55, 0.25);
+  --hero-overlay: linear-gradient(180deg, rgba(11, 13, 18, 0.65) 0%, rgba(11, 13, 18, 0.9) 65%, #0b0d12 100%);
+  --card-shadow-default: 0 20px 45px -10px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(212, 175, 55, 0.18);
+}
+
+[data-palette="gents-whiskey-noir"] body {
+  background-color: #0b0d12;
+  background-image: 
+    radial-gradient(circle at 50% -10%, rgba(212, 175, 55, 0.12) 0%, transparent 45%),
+    radial-gradient(circle at 10% 40%, rgba(184, 134, 11, 0.07) 0%, transparent 35%),
+    radial-gradient(circle at 90% 70%, rgba(212, 175, 55, 0.06) 0%, transparent 40%);
+}
+
 /* Palette 0: Obsidian Champagne (Deep Velvet Noir & Liquid Champagne Gold) */
 [data-palette="obsidian-champagne"] {
   --bg-main: #060608;
@@ -633,6 +665,109 @@
   background: #2563eb !important;
   color: #ffffff !important;
   border-radius: 3px !important;
+}
+
+/* 7. GENTS EXECUTIVE CLUB (The Gents Place + The Barbershop LV Hybrid) */
+[data-style="gents-executive-club"] {
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+  --heading-transform: none;
+  --heading-weight: 700;
+  --heading-letter-spacing: -0.01em;
+  --card-radius: 12px;
+  --badge-radius: 6px;
+  --btn-radius: 6px;
+  --border-width: 1px;
+}
+
+[data-style="gents-executive-club"] h1 {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.02em !important;
+  line-height: 1.1 !important;
+}
+
+[data-style="gents-executive-club"] h2,
+[data-style="gents-executive-club"] h3 {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.01em !important;
+}
+
+/* Executive Club Frosted Brass Cards */
+[data-style="gents-executive-club"] .card-luxury,
+[data-style="gents-executive-club"] .card-surface,
+[data-style="gents-executive-club"] .service-card,
+[data-style="gents-executive-club"] .barber-card {
+  border: 1px solid rgba(212, 175, 55, 0.28) !important;
+  border-radius: 12px !important;
+  background: linear-gradient(145deg, rgba(22, 28, 42, 0.88), rgba(12, 16, 24, 0.94)) !important;
+  box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.85), inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease !important;
+}
+
+[data-style="gents-executive-club"] .card-luxury::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #d4af37, transparent);
+  pointer-events: none;
+}
+
+[data-style="gents-executive-club"] .card-luxury:hover {
+  transform: translateY(-6px) scale(1.008) !important;
+  border-color: rgba(212, 175, 55, 0.6) !important;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.95), 0 0 25px rgba(212, 175, 55, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.18) !important;
+}
+
+/* Executive Solid Brass Action Buttons */
+[data-style="gents-executive-club"] button:not(#theme-demo-toolbar button),
+[data-style="gents-executive-club"] .open-booking-trigger,
+[data-style="gents-executive-club"] .btn-primary {
+  border-radius: 6px !important;
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-weight: 800 !important;
+  font-size: 13px !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  background: linear-gradient(135deg, #f3e5ab 0%, #d4af37 50%, #a88118 100%) !important;
+  color: #0b0d12 !important;
+  border: 1px solid rgba(255, 255, 255, 0.4) !important;
+  box-shadow: 0 8px 20px -4px rgba(212, 175, 55, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.4) !important;
+  transition: all 0.25s ease !important;
+}
+
+[data-style="gents-executive-club"] .open-booking-trigger:hover,
+[data-style="gents-executive-club"] .btn-primary:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 12px 28px -4px rgba(212, 175, 55, 0.65), inset 0 1px 0 rgba(255, 255, 255, 0.6) !important;
+  filter: brightness(1.05) !important;
+}
+
+/* Executive Badges */
+[data-style="gents-executive-club"] .theme-badge {
+  border-radius: 6px !important;
+  border: 1px solid rgba(212, 175, 55, 0.35) !important;
+  background: rgba(212, 175, 55, 0.08) !important;
+  color: #f3e5ab !important;
+}
+
+[data-style="gents-executive-club"] .shop-monogram {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  color: #f3e5ab !important;
+}
+
+[data-style="gents-executive-club"] .shop-badge {
+  border-color: rgba(212, 175, 55, 0.5) !important;
+  background: #d4af37 !important;
+  color: #0b0d12 !important;
+  border-radius: 4px !important;
+  font-weight: 900 !important;
 }
 
 /* --------------------------------------------------------------------------
