@@ -1,27 +1,28 @@
 /* ==========================================================================
-   BOULEVARD BARBER SHOP — RADICAL BESPOKE EDITORIAL ATELIER
-   Direct Fusion of The Gents Place Club & The Barbershop LV Aesthetics
+   BOULEVARD BARBER SHOP — DOWNTOWN LAS VEGAS
+   Authentic Fusion of The Barbershop LV & The Gents Place Architecture
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Italiana&family=Oswald:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600;1,700;1,800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&family=Syne:wght@700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Italiana&family=Oswald:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600;1,700;1,800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=Staatliches&display=swap');
 
 :root {
-  --noir: #050608;
-  --noir-card: #0c0e14;
-  --noir-card-border: rgba(212, 175, 55, 0.25);
-  --gold: #d4af37;
-  --gold-bright: #f5e6a8;
-  --gold-dark: #8c6e18;
-  --gold-glow: rgba(212, 175, 55, 0.4);
-  --whiskey: #c86b27;
-  --text-white: #ffffff;
-  --text-dim: #94a3b8;
-  --text-cream: #f5f0e6;
+  --bg-noir: #06070a;
+  --bg-panel: #0d1017;
+  --bg-card: rgba(15, 19, 28, 0.85);
+  --gold-primary: #d4af37;
+  --gold-glow: #ffd700;
+  --gold-metallic: linear-gradient(135deg, #fff2cc 0%, #d4af37 40%, #ffd700 70%, #997517 100%);
+  --leather-brown: #3d2614;
+  --border-gold: rgba(212, 175, 55, 0.28);
+  --border-gold-bright: rgba(212, 175, 55, 0.7);
+  --text-pure: #ffffff;
+  --text-cream: #f4eee1;
+  --text-muted: #94a3b8;
   --font-serif: 'Playfair Display', Georgia, serif;
-  --font-display: 'Cinzel Decorative', serif;
+  --font-display: 'Cinzel', serif;
+  --font-banner: 'Staatliches', 'Oswald', sans-serif;
   --font-sans: 'Plus Jakarta Sans', sans-serif;
   --font-mono: 'Space Grotesk', monospace;
-  --font-street: 'Oswald', sans-serif;
 }
 
 *, *::before, *::after {
@@ -30,153 +31,147 @@
 
 html {
   scroll-behavior: smooth;
-  background-color: var(--noir);
-  color: var(--text-white);
+  background-color: var(--bg-noir);
+  color: var(--text-pure);
   font-family: var(--font-sans);
 }
 
 body {
   margin: 0;
   padding: 0;
-  background-color: var(--noir);
-  background-image: 
-    radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.14) 0%, transparent 60%),
-    radial-gradient(circle at 10% 40%, rgba(200, 107, 39, 0.08) 0%, transparent 40%),
-    radial-gradient(circle at 90% 80%, rgba(212, 175, 55, 0.08) 0%, transparent 50%);
-  background-attachment: fixed;
+  background-color: var(--bg-noir);
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }
 
-/* Metallic Text & Badges */
-.text-gold-metallic {
-  background: linear-gradient(135deg, #fff4d0 0%, #d4af37 45%, #ffd700 70%, #997517 100%);
+/* Metallic Text Clamping */
+.gold-gradient-text {
+  background: var(--gold-metallic);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
 }
 
-.text-gold-solid {
-  color: var(--gold);
+/* Moving Hero Ken-Burns Pan & Zoom */
+.hero-bg-anim {
+  position: absolute;
+  inset: 0;
+  background-image: url('../assets/images/hero-interior.jpg');
+  background-size: cover;
+  background-position: center;
+  animation: heroPanZoom 24s ease-in-out infinite alternate;
+  filter: brightness(0.45) contrast(1.15);
+  transform-origin: center;
 }
 
-/* Marquee Ribbon */
-.marquee-container {
-  overflow: hidden;
-  white-space: nowrap;
-  background: #0f121a;
-  border-top: 1px solid var(--noir-card-border);
-  border-bottom: 1px solid var(--noir-card-border);
+@keyframes heroPanZoom {
+  0% { transform: scale(1) translate(0%, 0%); }
+  50% { transform: scale(1.1) translate(-2%, -1%); }
+  100% { transform: scale(1.18) translate(1%, 2%); }
 }
 
-.marquee-content {
-  display: inline-block;
-  animation: marquee 25s linear infinite;
+/* Glassmorphism Header */
+.nav-speakeasy {
+  background: rgba(6, 7, 10, 0.9);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border-gold);
 }
 
-@keyframes marquee {
-  0% { transform: translateX(0%); }
-  100% { transform: translateX(-50%); }
-}
-
-/* Glassmorphism Bar */
-.nav-atelier {
-  background: rgba(5, 6, 8, 0.88);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
-  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
-}
-
-/* Gold Button */
-.btn-gold-luxe {
+/* Big Gold Action CTA */
+.btn-gold-speakeasy {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #fff3cf 0%, #d4af37 50%, #99771a 100%);
-  color: #050608 !important;
-  font-family: var(--font-street);
-  font-weight: 700;
-  font-size: 14px;
-  letter-spacing: 0.1em;
+  background: var(--gold-metallic);
+  color: #06070a !important;
+  font-family: var(--font-banner);
+  font-size: 16px;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
+  padding: 12px 28px;
   border-radius: 4px;
   border: 1px solid rgba(255, 255, 255, 0.6);
-  box-shadow: 0 10px 30px -5px rgba(212, 175, 55, 0.5);
+  box-shadow: 0 10px 30px -5px rgba(212, 175, 55, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.6);
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   text-decoration: none;
 }
 
-.btn-gold-luxe:hover {
-  transform: translateY(-3px) scale(1.02);
+.btn-gold-speakeasy:hover {
+  transform: translateY(-2px) scale(1.02);
   box-shadow: 0 16px 40px -5px rgba(212, 175, 55, 0.7);
   filter: brightness(1.08);
 }
 
-.btn-noir-outline {
+.btn-outline-speakeasy {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: rgba(212, 175, 55, 0.06);
+  background: rgba(212, 175, 55, 0.08);
   color: var(--text-cream) !important;
-  font-family: var(--font-street);
-  font-weight: 700;
-  font-size: 14px;
+  font-family: var(--font-banner);
+  font-size: 15px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  padding: 12px 24px;
   border-radius: 4px;
-  border: 1px solid var(--gold);
+  border: 1px solid var(--gold-primary);
   backdrop-filter: blur(12px);
   cursor: pointer;
   transition: all 0.3s ease;
   text-decoration: none;
 }
 
-.btn-noir-outline:hover {
-  background: rgba(212, 175, 55, 0.2);
-  transform: translateY(-3px);
+.btn-outline-speakeasy:hover {
+  background: rgba(212, 175, 55, 0.22);
   color: #ffffff !important;
+  transform: translateY(-2px);
 }
 
-/* 3D Editorial Cards */
-.editorial-card {
-  background: var(--noir-card);
-  border: 1px solid var(--noir-card-border);
-  border-radius: 8px;
-  box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.9);
-  transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+/* Split Experience Panels */
+.split-panel {
   position: relative;
+  min-height: 480px;
   overflow: hidden;
+  border: 1px solid var(--border-gold);
+  border-radius: 8px;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.editorial-card:hover {
-  transform: translateY(-8px);
-  border-color: rgba(212, 175, 55, 0.7);
-  box-shadow: 0 30px 60px -10px rgba(0, 0, 0, 0.95), 0 0 30px rgba(212, 175, 55, 0.25);
+.split-panel:hover {
+  border-color: var(--border-gold-bright);
+  box-shadow: 0 25px 60px -10px rgba(0, 0, 0, 0.95), 0 0 30px rgba(212, 175, 55, 0.25);
+  transform: translateY(-6px);
 }
 
-/* Printed Menu Dot Leaders */
-.menu-dots {
+/* Printed Lounge Menu Dot Leaders */
+.menu-leader-dots {
   flex-grow: 1;
-  border-bottom: 1px dashed rgba(212, 175, 55, 0.3);
+  border-bottom: 1px dashed rgba(212, 175, 55, 0.35);
   margin: 0 12px;
   position: relative;
   top: -4px;
 }
 
-/* Pulse Animation */
-.pulse-green {
+/* Pulse animation */
+.pulse-green-dot {
   box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.7);
-  animation: pulseGreen 2s infinite;
+  animation: pulseGreenDot 2s infinite;
 }
 
-@keyframes pulseGreen {
+@keyframes pulseGreenDot {
   0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.7); }
   70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(52, 211, 153, 0); }
   100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(52, 211, 153, 0); }
 }
 
-/* 3D Tilt Card */
-.tilt-card-wrap {
-  perspective: 1000px;
+/* Steam particles canvas overlay */
+#steam-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 5;
 }

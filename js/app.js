@@ -1,20 +1,64 @@
 /**
- * BOULEVARD BARBER SHOP — RADICAL ATELIER ENGINE
+ * BOULEVARD BARBER SHOP — INTERACTIVE AMBIENT ENGINE
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  initSteamCanvas();
   initLiveHours();
-  init3DParallax();
   initLightbox();
-  initMobileMenu();
+  initMobileDrawer();
 });
 
-// Live Schedule Engine (Mon-Sun 7am-7pm)
-function initLiveHours() {
-  const badge = document.getElementById('live-status-pill');
-  if (!badge) return;
+// Ambient Steam & Light Particles on Hero
+function initSteamCanvas() {
+  const canvas = document.getElementById('steam-canvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
 
-  function check() {
+  function resize() {
+    canvas.width = canvas.parentElement.clientWidth;
+    canvas.height = canvas.parentElement.clientHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  const particles = [];
+  for (let i = 0; i < 35; i++) {
+    particles.push({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      radius: Math.random() * 2.5 + 1,
+      speedY: -(Math.random() * 0.4 + 0.15),
+      speedX: (Math.random() - 0.5) * 0.2,
+      opacity: Math.random() * 0.4 + 0.1
+    });
+  }
+
+  function render() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    particles.forEach(p => {
+      p.y += p.speedY;
+      p.x += p.speedX;
+      if (p.y < 0) {
+        p.y = canvas.height + 10;
+        p.x = Math.random() * canvas.width;
+      }
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(245, 230, 180, ${p.opacity})`;
+      ctx.fill();
+    });
+    requestAnimationFrame(render);
+  }
+  render();
+}
+
+// Live Hours Engine (Mon-Sun 7am-7pm)
+function initLiveHours() {
+  const pill = document.getElementById('live-status-pill');
+  if (!pill) return;
+
+  function update() {
     const timezone = 'America/Los_Angeles';
     const now = new Date();
     const local = new Date(now.toLocaleString("en-US", { timeZone: timezone }));
@@ -25,25 +69,13 @@ function initLiveHours() {
     const isOpen = (dec >= 7.0 && dec < 19.0);
 
     if (isOpen) {
-      badge.innerHTML = `<span class="w-2.5 h-2.5 rounded-full bg-emerald-400 pulse-green mr-2 inline-block"></span> <span class="text-emerald-400 font-bold uppercase tracking-wider">OPEN NOW</span> • Closes 7:00 PM • Walk-ins & Bookings Welcome`;
+      pill.innerHTML = `<span class="w-2.5 h-2.5 rounded-full bg-emerald-400 pulse-green-dot mr-2 inline-block shrink-0"></span> <span class="text-emerald-400 font-bold uppercase tracking-wider">OPEN NOW</span> • Closes 7:00 PM • 4 Master Chairs Active`;
     } else {
-      badge.innerHTML = `<span class="w-2.5 h-2.5 rounded-full bg-amber-500 mr-2 inline-block"></span> <span class="text-amber-400 font-bold uppercase tracking-wider">CLOSED NOW</span> • Re-opens Tomorrow at 7:00 AM`;
+      pill.innerHTML = `<span class="w-2.5 h-2.5 rounded-full bg-amber-500 mr-2 inline-block shrink-0"></span> <span class="text-amber-400 font-bold uppercase tracking-wider">CLOSED NOW</span> • Re-opens Tomorrow at 7:00 AM`;
     }
   }
-  check();
-  setInterval(check, 60000);
-}
-
-// 3D Parallax Tilt for Hero
-function init3DParallax() {
-  const card = document.getElementById('hero-tilt-frame');
-  if (!card) return;
-
-  window.addEventListener('mousemove', (e) => {
-    const x = (window.innerWidth / 2 - e.clientX) / 40;
-    const y = (window.innerHeight / 2 - e.clientY) / 40;
-    card.style.transform = `rotateY(${-x}deg) rotateX(${y}deg) scale(1.01)`;
-  });
+  update();
+  setInterval(update, 60000);
 }
 
 // Lightbox
@@ -81,7 +113,7 @@ function initLightbox() {
 }
 
 // Mobile Menu
-function initMobileMenu() {
+function initMobileDrawer() {
   const menu = document.getElementById('mobile-drawer');
   const btn = document.getElementById('mobile-toggle');
   const close = document.getElementById('close-drawer');
