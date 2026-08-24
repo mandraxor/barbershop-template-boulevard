@@ -18,6 +18,69 @@ document.addEventListener('DOMContentLoaded', () => {
 /* ==========================================================================
    1. REAL-TIME SHOP STATUS (LOCAL TIMEZONE: PST / PDT)
    ========================================================================== */
+function getDayScheduleFromConfig(dayIndex) {
+  const dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  const dayName = dayNames[dayIndex];
+  const schedule = window.SHOP_CONFIG?.hours?.schedule || {};
+
+  for (const item of Object.values(schedule)) {
+    if (!item.days) continue;
+    const daysStr = item.days.toLowerCase();
+    if (item.status === 'Closed') {
+      if (daysStr.includes(dayName.toLowerCase())) return { isClosed: true };
+      if (daysStr.includes('sunday & monday') && (dayIndex === 0 || dayIndex === 1)) return { isClosed: true };
+      if (daysStr.includes('sunday') && dayIndex === 0) return { isClosed: true };
+      if (daysStr.includes('monday') && dayIndex === 1) return { isClosed: true };
+    } else {
+      let matches = false;
+      if (daysStr.includes('daily') || daysStr.includes('monday – sunday') || daysStr.includes('monday - sunday')) {
+        matches = true;
+      } else if (daysStr.includes('monday – saturday') || daysStr.includes('monday - saturday')) {
+        matches = (dayIndex >= 1 && dayIndex <= 6);
+      } else if (daysStr.includes('tuesday – saturday') || daysStr.includes('tuesday - saturday')) {
+        matches = (dayIndex >= 2 && dayIndex <= 6);
+      } else if (daysStr.includes('tuesday – friday') || daysStr.includes('tuesday - friday')) {
+        matches = (dayIndex >= 2 && dayIndex <= 5);
+      } else if (daysStr.includes(dayName.toLowerCase())) {
+        matches = true;
+      }
+
+      if (matches) {
+        let openDec = 9.0;
+        let closeDec = 18.0;
+        if (item.open24h) {
+          const [h, m] = item.open24h.split(':').map(Number);
+          openDec = h + m / 60;
+        } else if (item.open) {
+          const m = item.open.match(/(\d+):?(\d*)\s*(AM|PM)/i);
+          if (m) {
+            let h = parseInt(m[1]);
+            const min = m[2] ? parseInt(m[2]) : 0;
+            if (m[3].toUpperCase() === 'PM' && h < 12) h += 12;
+            if (m[3].toUpperCase() === 'AM' && h === 12) h = 0;
+            openDec = h + min / 60;
+          }
+        }
+        if (item.close24h) {
+          const [h, m] = item.close24h.split(':').map(Number);
+          closeDec = h + m / 60;
+        } else if (item.close) {
+          const m = item.close.match(/(\d+):?(\d*)\s*(AM|PM)/i);
+          if (m) {
+            let h = parseInt(m[1]);
+            const min = m[2] ? parseInt(m[2]) : 0;
+            if (m[3].toUpperCase() === 'PM' && h < 12) h += 12;
+            if (m[3].toUpperCase() === 'AM' && h === 12) h = 0;
+            closeDec = h + min / 60;
+          }
+        }
+        return { isClosed: false, openStr: item.open || '9:00 AM', closeStr: item.close || '6:00 PM', openDec, closeDec };
+      }
+    }
+  }
+  return { isClosed: false, openStr: '9:00 AM', closeStr: '6:00 PM', openDec: 9.0, closeDec: 18.0 };
+}
+
 function initShopStatus() {
   const statusBadge = document.getElementById('shop-status-badge');
   const statusText = document.getElementById('shop-status-text');
@@ -41,32 +104,28 @@ function initShopStatus() {
     let closingTime = '';
     let nextOpening = '';
 
-    // Schedule:
-    // Tue-Fri (2-5): 9:00 AM - 6:00 PM (9.0 - 18.0)
-    // Sat (6): 9:00 AM - 4:00 PM (9.0 - 16.0)
-    // Sun (0) & Mon (1): Closed
+    const todaySched = getDayScheduleFromConfig(day);
 
-    if (day >= 2 && day <= 5) {
-      if (timeDecimal >= 9.0 && timeDecimal < 18.0) {
-        isOpen = true;
-        closingTime = '6:00 PM';
-      } else if (timeDecimal < 9.0) {
-        nextOpening = 'today at 9:00 AM';
-      } else {
-        nextOpening = day === 5 ? 'tomorrow (Sat) at 9:00 AM' : 'tomorrow at 9:00 AM';
-      }
-    } else if (day === 6) {
-      if (timeDecimal >= 9.0 && timeDecimal < 16.0) {
-        isOpen = true;
-        closingTime = '4:00 PM';
-      } else if (timeDecimal < 9.0) {
-        nextOpening = 'today at 9:00 AM';
-      } else {
-        nextOpening = 'Tuesday at 9:00 AM';
-      }
+    if (!todaySched.isClosed && timeDecimal >= todaySched.openDec && timeDecimal < todaySched.closeDec) {
+      isOpen = true;
+      closingTime = todaySched.closeStr;
+    } else if (!todaySched.isClosed && timeDecimal < todaySched.openDec) {
+      nextOpening = `today at ${todaySched.openStr}`;
     } else {
-      // Sunday or Monday
-      nextOpening = 'Tuesday at 9:00 AM';
+      // Find next open day
+      let foundNext = false;
+      const dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+      for (let offset = 1; offset <= 7; offset++) {
+        const nextDayIdx = (day + offset) % 7;
+        const nextSched = getDayScheduleFromConfig(nextDayIdx);
+        if (!nextSched.isClosed) {
+          const dayLabel = offset === 1 ? 'tomorrow' : dayNames[nextDayIdx];
+          nextOpening = `${dayLabel} at ${nextSched.openStr}`;
+          foundNext = true;
+          break;
+        }
+      }
+      if (!foundNext) nextOpening = 'tomorrow at 9:00 AM';
     }
 
     // Update Banner & Status Badges
@@ -295,8 +354,8 @@ function generateDateOptions() {
     d.setDate(today.getDate() + dayOffset);
     const dayOfWeek = d.getDay();
 
-    // Only Tue-Sat are open (2-6)
-    const isClosed = (dayOfWeek === 0 || dayOfWeek === 1);
+    const sched = getDayScheduleFromConfig(dayOfWeek);
+    const isClosed = sched.isClosed;
 
     const dateCard = document.createElement('button');
     dateCard.type = 'button';

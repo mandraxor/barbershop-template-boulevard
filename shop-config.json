@@ -71,22 +71,15 @@
   "hours": {
     "timezone": "America/Los_Angeles",
     "schedule": {
-      "monday_saturday": {
-        "days": "Monday – Saturday",
+      "daily": {
+        "days": "Monday – Sunday",
         "open": "7:00 AM",
         "close": "7:00 PM",
         "open24h": "07:00",
         "close24h": "19:00"
-      },
-      "sunday": {
-        "days": "Sunday",
-        "open": "8:00 AM",
-        "close": "5:00 PM",
-        "open24h": "08:00",
-        "close24h": "17:00"
       }
     },
-    "walkinPolicy": "Walk-ins Welcome Daily • Appointments Recommended"
+    "walkinPolicy": "Walk-ins Welcome Daily 7:00 AM – 7:00 PM • Appointments Recommended"
   },
   "barbers": [
     {
