@@ -3,10 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Boulevard Barber Shop | Downtown Las Vegas Luxury Grooming Lounge</title>
-  <meta name="description" content="Boulevard Barber Shop is Downtown Las Vegas's premier grooming destination at 906 S 6th St #105. Open daily 7 AM – 7 PM for precision fades, beard sculpting, and hot towel straight razor shaves.">
+  <title>Boulevard Barber Shop | Downtown Las Vegas Luxury Grooming Atelier</title>
+  <meta name="description" content="Boulevard Barber Shop at 906 S 6th St #105, Downtown Las Vegas. Executive skin fades, hot lather straight razor shaves, and beard sculpting. Open 7 days 7 AM – 7 PM.">
   
-  <!-- Tailwind CSS & FontAwesome CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="css/styles.css">
@@ -40,168 +39,154 @@
 </head>
 <body class="antialiased pb-20 md:pb-0 overflow-x-hidden">
 
-  <!-- TOP CONCIERGE BANNER -->
-  <div class="bg-surface py-2 px-3 border-b border-yellow-600/30 text-xs">
-    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-1 text-center sm:text-left">
-      <div id="shop-status-badge" class="flex items-center justify-center">
-        <span id="shop-status-dot" class="w-2 h-2 rounded-full bg-emerald-400 pulse-emerald mr-2 shrink-0"></span>
-        <span id="shop-status-text" class="text-gray-300 font-medium text-[11px] sm:text-xs">
-          <span class="text-emerald-400 font-bold">OPEN TODAY</span> (7:00 AM – 7:00 PM) • 4 Master Barbers on Chair • Walk-ins & Appointments Welcome
-        </span>
-      </div>
-      <div class="hidden md:flex items-center space-x-4 text-gray-400 text-[11px]">
-        <span><i class="fa-solid fa-location-dot text-amber-400 mr-1"></i> 906 S 6th St #105, Las Vegas, NV 89101</span>
-        <span><i class="fa-solid fa-phone text-amber-400 mr-1"></i> (702) 384-1453</span>
-      </div>
+  <!-- TOP MARQUEE TICKER TAPE (Inspired by The Barbershop LV) -->
+  <div class="marquee-container py-2 text-xs font-mono uppercase tracking-widest text-amber-300">
+    <div class="marquee-content">
+      <span>★ BOULEVARD BARBER SHOP ★ 906 S 6TH ST #105 DOWNTOWN LAS VEGAS ★ OPEN 7 DAYS A WEEK 7:00 AM – 7:00 PM ★ WALK-INS WELCOME ★ CALL (702) 384-1453 ★ MASTER SKIN FADES & STRAIGHT RAZOR SHAVES ★&nbsp;&nbsp;&nbsp;&nbsp;</span>
+      <span>★ BOULEVARD BARBER SHOP ★ 906 S 6TH ST #105 DOWNTOWN LAS VEGAS ★ OPEN 7 DAYS A WEEK 7:00 AM – 7:00 PM ★ WALK-INS WELCOME ★ CALL (702) 384-1453 ★ MASTER SKIN FADES & STRAIGHT RAZOR SHAVES ★&nbsp;&nbsp;&nbsp;&nbsp;</span>
     </div>
   </div>
 
-  <!-- MAIN NAVIGATION -->
-  <header class="header-glass sticky top-0 z-40 w-full transition-all">
-    <div class="max-w-7xl mx-auto px-3 sm:px-6 h-20 flex items-center justify-between gap-2">
+  <!-- NAVIGATION -->
+  <header class="nav-atelier sticky top-0 z-40 w-full">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 h-20 flex items-center justify-between gap-4">
       
-      <!-- Brand Logo -->
-      <a href="#" class="flex items-center space-x-2 sm:space-x-2.5 group shrink-0">
-        <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-lg p-[1.5px] bg-gradient-to-br from-yellow-200 via-yellow-500 to-yellow-800 shadow-lg group-hover:scale-105 transition-transform flex items-center justify-center shrink-0">
-          <div class="w-full h-full bg-[#07090c] rounded-[7px] flex items-center justify-center">
-            <span class="font-display font-black text-xs sm:text-sm text-yellow-400 tracking-tighter">BBS</span>
-          </div>
+      <!-- Brand Emblem -->
+      <a href="#" class="flex items-center space-x-3 group shrink-0">
+        <div class="w-10 h-10 border-2 border-yellow-500 rounded flex items-center justify-center bg-black shadow-[0_0_15px_rgba(212,175,55,0.4)] group-hover:scale-105 transition-transform">
+          <span class="font-display font-black text-sm text-yellow-400">BBS</span>
         </div>
-        <div class="text-left">
-          <div class="font-serif font-black text-[11px] min-[360px]:text-xs sm:text-base tracking-tight leading-none text-white whitespace-nowrap">
-            BOULEVARD BARBER SHOP
+        <div>
+          <div class="font-serif font-black text-sm sm:text-lg tracking-wider text-white uppercase leading-none">
+            BOULEVARD
           </div>
-          <p class="text-[7px] min-[360px]:text-[8px] sm:text-[9px] tracking-wider uppercase font-semibold text-amber-400/90 mt-1 whitespace-nowrap">Downtown Las Vegas • Historic 6th St</p>
+          <p class="text-[8px] sm:text-[9px] tracking-[0.2em] font-mono text-amber-400 uppercase mt-0.5">Barber Atelier • DTLV</p>
         </div>
       </a>
 
-      <!-- Desktop Nav -->
-      <nav class="hidden xl:flex items-center space-x-5 text-xs font-bold uppercase tracking-wider text-gray-300">
-        <a href="#ritual" class="hover:text-amber-400 transition-colors">The Ritual</a>
-        <a href="#services" class="hover:text-amber-400 transition-colors">Services & Pricing</a>
-        <a href="#artisans" class="hover:text-amber-400 transition-colors">Master Artisans</a>
-        <a href="#lookbook" class="hover:text-amber-400 transition-colors">Lookbook</a>
-        <a href="#reviews" class="hover:text-amber-400 transition-colors">Reviews</a>
-        <a href="#location" class="hover:text-amber-400 transition-colors">Location</a>
+      <!-- Desktop Nav Menu -->
+      <nav class="hidden xl:flex items-center space-x-8 text-xs font-bold uppercase tracking-widest text-gray-300">
+        <a href="#about" class="hover:text-amber-400 transition-colors">The Atelier</a>
+        <a href="#menu" class="hover:text-amber-400 transition-colors">Grooming Menu</a>
+        <a href="#artisans" class="hover:text-amber-400 transition-colors">Master Roster</a>
+        <a href="#gallery" class="hover:text-amber-400 transition-colors">Lookbook</a>
+        <a href="#location" class="hover:text-amber-400 transition-colors">Visit Us</a>
       </nav>
 
-      <!-- Action Buttons -->
-      <div class="flex items-center space-x-2 sm:space-x-3 shrink-0">
-        <a href="tel:7023841453" class="hidden 2xl:inline-flex btn-glass-outline px-3.5 py-2 text-xs">
-          <i class="fa-solid fa-phone text-amber-400 mr-1.5"></i> (702) 384-1453
+      <!-- Desktop Actions -->
+      <div class="flex items-center space-x-3 shrink-0">
+        <a href="tel:7023841453" class="hidden 2xl:inline-flex btn-noir-outline px-4 py-2 text-xs font-mono">
+          <i class="fa-solid fa-phone text-amber-400 mr-2"></i> (702) 384-1453
         </a>
-        <a href="https://booksy.com/en-us/705462_boulevard-barber-shop_barber-shop_134764_las-vegas" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex btn-brass px-3.5 sm:px-5 py-2 sm:py-2.5 text-xs">
-          <i class="fa-solid fa-calendar-check mr-1.5"></i> Book Chair
+        <a href="https://booksy.com/en-us/705462_boulevard-barber-shop_barber-shop_134764_las-vegas" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex btn-gold-luxe px-6 py-2.5 text-xs">
+          <i class="fa-solid fa-calendar-check mr-2"></i> Reserve Chair
         </a>
-        <button id="mobile-menu-toggle" aria-label="Toggle Mobile Navigation" class="xl:hidden p-2 text-amber-400 border border-yellow-600/40 rounded-lg hover:bg-yellow-500/10">
-          <i class="fa-solid fa-bars text-base sm:text-lg"></i>
+        <button id="mobile-toggle" aria-label="Open Navigation" class="xl:hidden p-2.5 text-amber-400 border border-yellow-600/40 rounded hover:bg-yellow-500/10">
+          <i class="fa-solid fa-bars text-lg"></i>
         </button>
       </div>
 
     </div>
   </header>
 
-  <!-- MOBILE NAV DRAWER (Hidden by default) -->
-  <div id="mobile-drawer" class="fixed inset-0 z-50 bg-[#07090c]/95 backdrop-blur-2xl hidden flex-col justify-between p-6 xl:hidden">
+  <!-- MOBILE DRAWER -->
+  <div id="mobile-drawer" class="fixed inset-0 z-50 bg-[#050608]/98 backdrop-blur-3xl hidden flex-col justify-between p-8 xl:hidden">
     <div>
-      <div class="flex items-center justify-between border-b border-yellow-600/30 pb-4 mb-6">
-        <div class="flex items-center space-x-2">
-          <div class="w-8 h-8 rounded bg-yellow-500 text-black font-black flex items-center justify-center text-xs">BBS</div>
-          <span class="font-serif font-black text-sm text-white">BOULEVARD BARBER SHOP</span>
+      <div class="flex items-center justify-between border-b border-yellow-600/30 pb-4 mb-8">
+        <div class="flex items-center space-x-3">
+          <div class="w-8 h-8 border border-yellow-500 rounded flex items-center justify-center font-display text-xs text-yellow-400">BBS</div>
+          <span class="font-serif font-bold text-lg text-white">BOULEVARD BARBER SHOP</span>
         </div>
-        <button id="close-mobile-drawer" class="text-gray-400 hover:text-white p-2">
-          <i class="fa-solid fa-xmark text-xl"></i>
+        <button id="close-drawer" class="text-gray-400 hover:text-white p-2">
+          <i class="fa-solid fa-xmark text-2xl"></i>
         </button>
       </div>
-      <nav class="flex flex-col space-y-4 text-base font-bold uppercase tracking-wider">
-        <a href="#ritual" class="mobile-nav-link text-gray-300 hover:text-amber-400 py-1">The Ritual</a>
-        <a href="#services" class="mobile-nav-link text-gray-300 hover:text-amber-400 py-1">Services & Pricing</a>
-        <a href="#artisans" class="mobile-nav-link text-gray-300 hover:text-amber-400 py-1">Master Artisans</a>
-        <a href="#lookbook" class="mobile-nav-link text-gray-300 hover:text-amber-400 py-1">Lookbook</a>
-        <a href="#reviews" class="mobile-nav-link text-gray-300 hover:text-amber-400 py-1">Reviews</a>
-        <a href="#location" class="mobile-nav-link text-gray-300 hover:text-amber-400 py-1">Location & Hours</a>
+      <nav class="flex flex-col space-y-6 text-lg font-serif font-bold tracking-wide">
+        <a href="#about" class="drawer-link text-gray-300 hover:text-amber-400">01. The Atelier Story</a>
+        <a href="#menu" class="drawer-link text-gray-300 hover:text-amber-400">02. Grooming Menu & Pricing</a>
+        <a href="#artisans" class="drawer-link text-gray-300 hover:text-amber-400">03. Master Barbers</a>
+        <a href="#gallery" class="drawer-link text-gray-300 hover:text-amber-400">04. Signature Lookbook</a>
+        <a href="#location" class="drawer-link text-gray-300 hover:text-amber-400">05. Location & 7-Day Hours</a>
       </nav>
     </div>
-    <div class="space-y-3 pt-6 border-t border-yellow-600/30">
-      <a href="tel:7023841453" class="btn-glass-outline w-full py-3 text-center text-sm">
+    <div class="space-y-4 pt-6 border-t border-yellow-600/30">
+      <a href="tel:7023841453" class="btn-noir-outline w-full py-3.5 text-center text-sm">
         <i class="fa-solid fa-phone text-amber-400 mr-2"></i> Call (702) 384-1453
       </a>
-      <a href="https://booksy.com/en-us/705462_boulevard-barber-shop_barber-shop_134764_las-vegas" target="_blank" class="btn-brass w-full py-3.5 text-center text-sm">
-        <i class="fa-solid fa-calendar-check mr-2"></i> Reserve Online on Booksy
+      <a href="https://booksy.com/en-us/705462_boulevard-barber-shop_barber-shop_134764_las-vegas" target="_blank" class="btn-gold-luxe w-full py-4 text-center text-sm">
+        <i class="fa-solid fa-calendar-check mr-2"></i> Book Online with Booksy
       </a>
     </div>
   </div>
 
-  <!-- HERO SECTION: CINEMATIC SPLIT 3D SHOWCASE -->
-  <section class="relative min-h-[85vh] flex items-center justify-center py-12 lg:py-20 overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+  <!-- HERO SECTION (Ultra-Dramatic Magazine Cover Style) -->
+  <section class="relative min-h-[92vh] flex items-center justify-center py-16 lg:py-24 px-4 sm:px-8 overflow-hidden">
+    
+    <!-- Background Ambient Glow -->
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(212,175,55,0.1)_0%,transparent_70%)] pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
       
-      <!-- Left Hero Column -->
+      <!-- Headline Block -->
       <div class="lg:col-span-7 text-center lg:text-left">
-        <div class="inline-flex items-center space-x-2 badge-luxe mb-6 max-w-full truncate">
-          <span class="w-2 h-2 rounded-full bg-emerald-400 pulse-emerald shrink-0"></span>
-          <span class="truncate">Downtown Las Vegas Executive Grooming Lounge</span>
+        
+        <div id="live-status-pill" class="inline-flex items-center px-4 py-2 rounded-full border border-yellow-500/30 bg-black/60 backdrop-blur-md text-xs font-mono text-gray-300 mb-8 shadow-lg max-w-full truncate">
+          <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 pulse-green mr-2 inline-block shrink-0"></span>
+          <span class="truncate">OPEN TODAY 7:00 AM – 7:00 PM • DOWNTOWN LAS VEGAS</span>
         </div>
 
-        <h1 class="font-hero-title text-3xl min-[360px]:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-6 text-white leading-tight break-words">
-          Where Precision Meets <br>
-          <span class="text-gold-gradient italic font-serif">The Fine Art</span> of Grooming.
+        <h1 class="font-serif font-black text-4xl min-[360px]:text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white leading-[1.04] tracking-tight mb-8">
+          THE ART OF <br>
+          <span class="text-gold-metallic italic font-serif">THE GENTLEMAN'S</span> <br>
+          PRECISION CUT.
         </h1>
 
-        <p class="text-gray-300 text-xs sm:text-base md:text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed mb-8">
-          Welcome to Boulevard Barber Shop at 906 S 6th St. Master skin fades, tailored scissor crafting, sculpted beard lineups, and authentic hot lather straight razor shaves executed 7 days a week by veteran artisans.
+        <p class="text-gray-300 text-sm sm:text-base md:text-lg max-w-xl mx-auto lg:mx-0 leading-relaxed font-light mb-10">
+          Boulevard Barber Shop is Downtown Las Vegas's quintessential grooming atelier at 906 S 6th St. Master skin fades, sculpted beard artistry, and authentic hot lather straight razor shaves crafted 7 days a week.
         </p>
 
-        <!-- CTA Row -->
-        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-8">
-          <a href="https://booksy.com/en-us/705462_boulevard-barber-shop_barber-shop_134764_las-vegas" target="_blank" rel="noopener noreferrer" class="btn-brass w-full sm:w-auto px-8 py-4 text-xs sm:text-sm font-bold shadow-xl">
-            <i class="fa-solid fa-calendar-check mr-2 text-base"></i> Reserve Your Chair
+        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-12">
+          <a href="https://booksy.com/en-us/705462_boulevard-barber-shop_barber-shop_134764_las-vegas" target="_blank" rel="noopener noreferrer" class="btn-gold-luxe w-full sm:w-auto px-10 py-4 text-sm font-bold shadow-2xl">
+            <i class="fa-solid fa-calendar-check mr-2"></i> Book Online on Booksy
           </a>
-          <a href="#ritual" class="btn-glass-outline w-full sm:w-auto px-8 py-4 text-xs sm:text-sm font-bold">
-            <i class="fa-solid fa-scroll text-amber-400 mr-2"></i> Explore The 5-Step Ritual
+          <a href="#menu" class="btn-noir-outline w-full sm:w-auto px-8 py-4 text-sm font-bold">
+            <i class="fa-solid fa-list mr-2 text-amber-400"></i> Explore Grooming Menu
           </a>
         </div>
 
-        <!-- Trust Stats -->
-        <div class="grid grid-cols-3 gap-2 sm:gap-4 pt-6 border-t border-yellow-600/20 max-w-lg mx-auto lg:mx-0 text-center">
-          <div>
-            <div class="font-display text-lg sm:text-2xl font-bold text-amber-400">5.0 ★</div>
-            <div class="text-[9px] sm:text-xs text-gray-400 uppercase tracking-wider font-semibold">Verified Rating</div>
-          </div>
-          <div class="border-x border-yellow-600/20">
-            <div class="font-display text-lg sm:text-2xl font-bold text-amber-400">7 Days</div>
-            <div class="text-[9px] sm:text-xs text-gray-400 uppercase tracking-wider font-semibold">7 AM – 7 PM Daily</div>
-          </div>
-          <div>
-            <div class="font-display text-lg sm:text-2xl font-bold text-amber-400">from $35</div>
-            <div class="text-[9px] sm:text-xs text-gray-400 uppercase tracking-wider font-semibold">Master Cuts</div>
-          </div>
+        <!-- 3-Pillar Micro Trust -->
+        <div class="flex items-center justify-center lg:justify-start space-x-6 text-xs text-gray-400 font-mono">
+          <span>★ 5.0 Star Rating</span>
+          <span>•</span>
+          <span>4 Master Barbers</span>
+          <span>•</span>
+          <span>Walk-ins 7 Days</span>
         </div>
+
       </div>
 
-      <!-- Right 3D Perspective Card -->
-      <div class="lg:col-span-5 relative perspective-container">
-        <div id="hero-3d-tilt-card" class="card-3d p-3 sm:p-4 rounded-2xl shadow-2xl relative">
-          <div class="relative h-[340px] sm:h-[440px] rounded-xl overflow-hidden">
-            <img src="assets/images/hero-interior.jpg" alt="Boulevard Barber Shop Master Barber Grooming Lounge" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-gradient-to-t from-[#07090c] via-transparent to-black/30"></div>
+      <!-- Hero Visual Frame (3D Tilt) -->
+      <div class="lg:col-span-5 tilt-card-wrap flex justify-center">
+        <div id="hero-tilt-frame" class="editorial-card p-3 sm:p-4 rounded-xl border-2 border-yellow-500/40 w-full max-w-md shadow-2xl transition-transform duration-200">
+          <div class="relative h-[420px] sm:h-[480px] rounded overflow-hidden">
+            <img src="assets/images/hero-interior.jpg" alt="Boulevard Barber Shop Interior & Master Shave" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/30"></div>
             
-            <!-- Floating Overlay Badges -->
-            <div class="absolute top-3 left-3 right-3 flex items-center justify-between">
-              <span class="px-2.5 py-1 rounded-md bg-black/80 backdrop-blur-md border border-yellow-500/40 text-amber-400 text-[10px] sm:text-xs font-bold uppercase tracking-wider">
-                👑 4 Master Barbers on Staff
+            <div class="absolute top-4 left-4 right-4 flex justify-between items-center">
+              <span class="px-3 py-1 bg-black/90 border border-yellow-500/50 text-amber-400 text-[10px] font-mono uppercase tracking-widest rounded">
+                Est. Historic 6th St
               </span>
-              <span class="px-2 py-0.5 rounded-md bg-emerald-500/20 border border-emerald-400/40 text-emerald-300 text-[10px] sm:text-xs font-bold">
-                Open Daily
+              <span class="px-3 py-1 bg-emerald-950/80 border border-emerald-400/50 text-emerald-300 text-[10px] font-mono uppercase tracking-widest rounded">
+                7 Days 7am–7pm
               </span>
             </div>
 
-            <div class="absolute bottom-3 left-3 right-3 p-3.5 rounded-xl bg-black/85 backdrop-blur-md border border-yellow-600/30">
-              <div class="flex items-center justify-between mb-1">
-                <span class="font-serif font-bold text-white text-xs sm:text-sm">Boulevard Signature Cut & Shave</span>
-                <span class="text-amber-400 font-bold text-xs sm:text-sm">from $35</span>
+            <div class="absolute bottom-4 left-4 right-4 p-4 rounded bg-black/90 border border-yellow-600/40 backdrop-blur-md">
+              <div class="flex justify-between items-center mb-1">
+                <span class="font-serif font-bold text-white text-sm">Male Precision Cut</span>
+                <span class="font-mono text-amber-400 font-bold text-sm">from $35</span>
               </div>
-              <p class="text-[11px] sm:text-xs text-gray-300">Hot lather neck shave, essential oil towel & custom finish included.</p>
+              <p class="text-xs text-gray-300 font-light">Hot lather straight razor neck clean-up & steamed towel included.</p>
             </div>
           </div>
         </div>
@@ -210,238 +195,45 @@
     </div>
   </section>
 
-  <!-- THE BOULEVARD STANDARD (4 PILLARS OF DISTINCTION) -->
-  <section class="py-16 bg-surface/50 border-y border-yellow-600/20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-3xl mx-auto mb-12">
-        <span class="badge-luxe mb-3">The Executive Standard</span>
-        <h2 class="font-serif text-2xl sm:text-4xl font-black text-white">Redefining the Gentleman's Cut</h2>
-        <p class="text-gray-400 text-xs sm:text-base mt-2">Combining old-world barbershop traditions with contemporary master-level technique.</p>
-      </div>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-        
-        <div class="card-3d p-5 sm:p-6">
-          <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-yellow-500/10 border border-yellow-500/30 flex items-center justify-center text-amber-400 text-lg sm:text-xl mb-4">
-            <i class="fa-solid fa-scissors"></i>
-          </div>
-          <h3 class="font-serif font-bold text-base sm:text-lg text-white mb-2">Master Barber Roster</h3>
-          <p class="text-xs text-gray-300 leading-relaxed">Elier, Bryan, Lay, and Henry bring veteran precision to every skin fade, taper, and scissor silhouette.</p>
-        </div>
-
-        <div class="card-3d p-5 sm:p-6">
-          <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-yellow-500/10 border border-yellow-500/30 flex items-center justify-center text-amber-400 text-lg sm:text-xl mb-4">
-            <i class="fa-solid fa-hot-tub-person"></i>
-          </div>
-          <h3 class="font-serif font-bold text-base sm:text-lg text-white mb-2">Straight Razor & Hot Towels</h3>
-          <p class="text-xs text-gray-300 leading-relaxed">Authentic warm lather straight-razor edging and eucalyptus steamed towels for an unmatched soothing finish.</p>
-        </div>
-
-        <div class="card-3d p-5 sm:p-6">
-          <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-yellow-500/10 border border-yellow-500/30 flex items-center justify-center text-amber-400 text-lg sm:text-xl mb-4">
-            <i class="fa-solid fa-clock"></i>
-          </div>
-          <h3 class="font-serif font-bold text-base sm:text-lg text-white mb-2">7 Days • 7 AM – 7 PM</h3>
-          <p class="text-xs text-gray-300 leading-relaxed">Early morning before work, midday executive trim, or weekend refresh—we are open all 7 days for your convenience.</p>
-        </div>
-
-        <div class="card-3d p-5 sm:p-6">
-          <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-yellow-500/10 border border-yellow-500/30 flex items-center justify-center text-amber-400 text-lg sm:text-xl mb-4">
-            <i class="fa-solid fa-couch"></i>
-          </div>
-          <h3 class="font-serif font-bold text-base sm:text-lg text-white mb-2">Historic 6th St Lounge</h3>
-          <p class="text-xs text-gray-300 leading-relaxed">Relax in our comfortable air-conditioned leather lounge in Downtown Las Vegas with complimentary refreshments.</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- THE 5-STEP SIGNATURE GROOMING RITUAL -->
-  <section id="ritual" class="py-16 sm:py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-3xl mx-auto mb-14">
-        <span class="badge-luxe mb-3">The Experience</span>
-        <h2 class="font-serif text-2xl sm:text-5xl font-black text-white">The 5-Step Grooming Ritual</h2>
-        <p class="text-gray-400 text-xs sm:text-base mt-2">Every chair experience is meticulously structured for perfection from consultation to finish.</p>
-      </div>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
-        
-        <div class="card-3d p-5 text-center flex flex-col justify-between">
-          <div>
-            <div class="ritual-step-num mb-2">01</div>
-            <h4 class="font-serif font-bold text-sm text-white mb-2">Consultation</h4>
-            <p class="text-xs text-gray-400 leading-relaxed">Personal hairline and facial structure analysis to tailor the perfect fade and shape.</p>
-          </div>
-          <div class="mt-4 pt-3 border-t border-yellow-600/20 text-[10px] text-amber-400 uppercase font-semibold">Step One</div>
-        </div>
-
-        <div class="card-3d p-5 text-center flex flex-col justify-between">
-          <div>
-            <div class="ritual-step-num mb-2">02</div>
-            <h4 class="font-serif font-bold text-sm text-white mb-2">Precision Cut</h4>
-            <p class="text-xs text-gray-400 leading-relaxed">Master clipper and shear technique with immaculate gradient blending.</p>
-          </div>
-          <div class="mt-4 pt-3 border-t border-yellow-600/20 text-[10px] text-amber-400 uppercase font-semibold">Step Two</div>
-        </div>
-
-        <div class="card-3d p-5 text-center flex flex-col justify-between">
-          <div>
-            <div class="ritual-step-num mb-2">03</div>
-            <h4 class="font-serif font-bold text-sm text-white mb-2">Steamed Towel</h4>
-            <p class="text-xs text-gray-400 leading-relaxed">Aromatherapy infused hot steamed towel to open pores and soften follicles.</p>
-          </div>
-          <div class="mt-4 pt-3 border-t border-yellow-600/20 text-[10px] text-amber-400 uppercase font-semibold">Step Three</div>
-        </div>
-
-        <div class="card-3d p-5 text-center flex flex-col justify-between">
-          <div>
-            <div class="ritual-step-num mb-2">04</div>
-            <h4 class="font-serif font-bold text-sm text-white mb-2">Straight Razor</h4>
-            <p class="text-xs text-gray-400 leading-relaxed">Traditional warm lather straight razor edging on neckline, sideburns, or beard line.</p>
-          </div>
-          <div class="mt-4 pt-3 border-t border-yellow-600/20 text-[10px] text-amber-400 uppercase font-semibold">Step Four</div>
-        </div>
-
-        <div class="card-3d p-5 text-center flex flex-col justify-between sm:col-span-2 lg:col-span-1">
-          <div>
-            <div class="ritual-step-num mb-2">05</div>
-            <h4 class="font-serif font-bold text-sm text-white mb-2">Custom Finish</h4>
-            <p class="text-xs text-gray-400 leading-relaxed">Artisanal aftershave tonic, cooling talc, and premium matte styling product.</p>
-          </div>
-          <div class="mt-4 pt-3 border-t border-yellow-600/20 text-[10px] text-amber-400 uppercase font-semibold">Step Five</div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- SERVICES & PRICING MENU -->
-  <section id="services" class="py-16 sm:py-20 bg-surface/40 border-y border-yellow-600/20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <!-- THE ATELIER STORY & HERITAGE (Split Narrative) -->
+  <section id="about" class="py-24 bg-[#080a0f] border-y border-yellow-600/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8">
       
-      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
-        <div>
-          <span class="badge-luxe mb-3">Service Atelier</span>
-          <h2 class="font-serif text-2xl sm:text-5xl font-black text-white">Curated Grooming Menu</h2>
-          <p class="text-gray-400 text-xs sm:text-base mt-2">Transparent pricing from staff starting rates across all chairs.</p>
-        </div>
-
-        <!-- Filter Tabs -->
-        <div class="flex items-center flex-wrap gap-1.5 sm:gap-2 mt-6 md:mt-0 p-1 bg-black/60 rounded-xl border border-yellow-600/30">
-          <button class="filter-tab-btn active" data-filter="all">All Services</button>
-          <button class="filter-tab-btn" data-filter="haircut">Haircuts</button>
-          <button class="filter-tab-btn" data-filter="beard">Beard & Shave</button>
-          <button class="filter-tab-btn" data-filter="vip">VIP Packages</button>
-        </div>
-      </div>
-
-      <!-- Services Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         
-        <!-- Service 1 -->
-        <div class="card-3d p-5 sm:p-6 service-filter-card flex flex-col justify-between" data-category="haircut all">
-          <div>
-            <div class="flex items-center justify-between mb-2">
-              <h3 class="font-serif font-bold text-base sm:text-xl text-white">Male Haircut</h3>
-              <span class="font-serif font-black text-amber-400 text-base sm:text-xl">from $35</span>
-            </div>
-            <p class="text-xs sm:text-sm text-gray-300 leading-relaxed mb-4">Precision skin fade, taper, crop, or classic scissor cut tailored to head shape. Includes hot lather razor neck clean-up and styling.</p>
+        <div class="lg:col-span-6 grid grid-cols-2 gap-4">
+          <div class="editorial-card h-72 rounded-lg overflow-hidden">
+            <img src="assets/images/crew-lasvegas.jpg" alt="Boulevard Barber Shop Team" class="w-full h-full object-cover">
           </div>
-          <div class="flex items-center justify-between pt-4 border-t border-yellow-600/20">
-            <span class="text-xs text-gray-400"><i class="fa-regular fa-clock mr-1 text-amber-400"></i> 30 mins</span>
-            <a href="https://booksy.com/en-us/705462_boulevard-barber-shop_barber-shop_134764_las-vegas" target="_blank" class="btn-brass px-4 py-1.5 text-xs">Book Service</a>
+          <div class="editorial-card h-72 rounded-lg overflow-hidden mt-8">
+            <img src="assets/images/beard-shave.jpg" alt="Master Straight Razor Shave" class="w-full h-full object-cover">
           </div>
         </div>
 
-        <!-- Service 2 -->
-        <div class="card-3d p-5 sm:p-6 service-filter-card flex flex-col justify-between" data-category="haircut beard all">
-          <div>
-            <div class="flex items-center justify-between mb-2">
-              <h3 class="font-serif font-bold text-base sm:text-xl text-white">Haircut & Beard Sculpt</h3>
-              <span class="font-serif font-black text-amber-400 text-base sm:text-xl">from $65</span>
-            </div>
-            <p class="text-xs sm:text-sm text-gray-300 leading-relaxed mb-4">The definitive full grooming experience. Custom precision haircut plus full beard shaping, straight razor edge lining, hot towel, and beard oil.</p>
-          </div>
-          <div class="flex items-center justify-between pt-4 border-t border-yellow-600/20">
-            <span class="text-xs text-gray-400"><i class="fa-regular fa-clock mr-1 text-amber-400"></i> 45 mins</span>
-            <a href="https://booksy.com/en-us/705462_boulevard-barber-shop_barber-shop_134764_las-vegas" target="_blank" class="btn-brass px-4 py-1.5 text-xs">Book Service</a>
-          </div>
-        </div>
+        <div class="lg:col-span-6">
+          <span class="text-amber-400 font-mono text-xs uppercase tracking-[0.25em] block mb-3">01. The Boulevard Standard</span>
+          <h2 class="font-serif font-black text-3xl sm:text-5xl text-white mb-6 leading-tight">
+            Old-World Craftsmanship. <br>
+            <span class="text-gold-metallic italic">Downtown Soul.</span>
+          </h2>
+          
+          <p class="text-gray-300 text-sm sm:text-base leading-relaxed mb-6 font-light">
+            Located in the Historic 6th Street Commercial District at <strong class="text-white">906 S 6th St #105</strong>, Boulevard Barber Shop preserves the timeless rituals of traditional American barbering while executing modern urban styling.
+          </p>
 
-        <!-- Service 3 -->
-        <div class="card-3d p-5 sm:p-6 service-filter-card flex flex-col justify-between" data-category="beard all">
-          <div>
-            <div class="flex items-center justify-between mb-2">
-              <h3 class="font-serif font-bold text-base sm:text-xl text-white">Beard Shaping & Razor Edge</h3>
-              <span class="font-serif font-black text-amber-400 text-base sm:text-xl">from $30</span>
-            </div>
-            <p class="text-xs sm:text-sm text-gray-300 leading-relaxed mb-4">Detailed beard sculpting, length reduction, cheek/jawline straight razor defining, and soothing hot towel application.</p>
-          </div>
-          <div class="flex items-center justify-between pt-4 border-t border-yellow-600/20">
-            <span class="text-xs text-gray-400"><i class="fa-regular fa-clock mr-1 text-amber-400"></i> 30 mins</span>
-            <a href="https://booksy.com/en-us/705462_boulevard-barber-shop_barber-shop_134764_las-vegas" target="_blank" class="btn-brass px-4 py-1.5 text-xs">Book Service</a>
-          </div>
-        </div>
+          <p class="text-gray-300 text-sm sm:text-base leading-relaxed mb-8 font-light">
+            Every chair is staffed by veteran artisans—Elier, Bryan, Lay, and Henry—dedicated to skin fades, textured scissor work, custom beard contours, and authentic hot lather straight razor shaves.
+          </p>
 
-        <!-- Service 4 -->
-        <div class="card-3d p-5 sm:p-6 service-filter-card flex flex-col justify-between" data-category="beard all">
-          <div>
-            <div class="flex items-center justify-between mb-2">
-              <h3 class="font-serif font-bold text-base sm:text-xl text-white">Hot Towel Straight Razor Shave</h3>
-              <span class="font-serif font-black text-amber-400 text-base sm:text-xl">from $30</span>
+          <div class="grid grid-cols-2 gap-6 pt-6 border-t border-yellow-600/20 font-mono text-xs">
+            <div>
+              <span class="text-amber-400 text-lg font-bold block mb-1">01 / 7 DAYS</span>
+              <p class="text-gray-400">Open Monday through Sunday from 7:00 AM to 7:00 PM.</p>
             </div>
-            <p class="text-xs sm:text-sm text-gray-300 leading-relaxed mb-4">Old-school classic barber shave. Pre-shave oil, two steaming hot towels, rich warm lather, double-pass razor shave, and cooling tonic.</p>
-          </div>
-          <div class="flex items-center justify-between pt-4 border-t border-yellow-600/20">
-            <span class="text-xs text-gray-400"><i class="fa-regular fa-clock mr-1 text-amber-400"></i> 30 mins</span>
-            <a href="https://booksy.com/en-us/705462_boulevard-barber-shop_barber-shop_134764_las-vegas" target="_blank" class="btn-brass px-4 py-1.5 text-xs">Book Service</a>
-          </div>
-        </div>
-
-        <!-- Service 5 -->
-        <div class="card-3d p-5 sm:p-6 service-filter-card flex flex-col justify-between" data-category="haircut all">
-          <div>
-            <div class="flex items-center justify-between mb-2">
-              <h3 class="font-serif font-bold text-base sm:text-xl text-white">Razor Head Shave</h3>
-              <span class="font-serif font-black text-amber-400 text-base sm:text-xl">from $30</span>
+            <div>
+              <span class="text-amber-400 text-lg font-bold block mb-1">02 / WALK-INS</span>
+              <p class="text-gray-400">Immediate walk-in chairs available daily plus online Booksy booking.</p>
             </div>
-            <p class="text-xs sm:text-sm text-gray-300 leading-relaxed mb-4">Complete full scalp straight razor shave with essential oil hot towel prep, rich lather, and moisturizing post-shave scalp treatment.</p>
-          </div>
-          <div class="flex items-center justify-between pt-4 border-t border-yellow-600/20">
-            <span class="text-xs text-gray-400"><i class="fa-regular fa-clock mr-1 text-amber-400"></i> 30 mins</span>
-            <a href="https://booksy.com/en-us/705462_boulevard-barber-shop_barber-shop_134764_las-vegas" target="_blank" class="btn-brass px-4 py-1.5 text-xs">Book Service</a>
-          </div>
-        </div>
-
-        <!-- Service 6 -->
-        <div class="card-3d p-5 sm:p-6 service-filter-card flex flex-col justify-between" data-category="haircut all">
-          <div>
-            <div class="flex items-center justify-between mb-2">
-              <h3 class="font-serif font-bold text-base sm:text-xl text-white">Kids Cut (10 & Under)</h3>
-              <span class="font-serif font-black text-amber-400 text-base sm:text-xl">from $25</span>
-            </div>
-            <p class="text-xs sm:text-sm text-gray-300 leading-relaxed mb-4">Clean, stylish children's haircut in a patient, welcoming, and relaxed chair environment.</p>
-          </div>
-          <div class="flex items-center justify-between pt-4 border-t border-yellow-600/20">
-            <span class="text-xs text-gray-400"><i class="fa-regular fa-clock mr-1 text-amber-400"></i> 30 mins</span>
-            <a href="https://booksy.com/en-us/705462_boulevard-barber-shop_barber-shop_134764_las-vegas" target="_blank" class="btn-brass px-4 py-1.5 text-xs">Book Service</a>
-          </div>
-        </div>
-
-        <!-- Service 7 -->
-        <div class="card-3d p-5 sm:p-6 service-filter-card flex flex-col justify-between md:col-span-2" data-category="vip all">
-          <div>
-            <div class="flex items-center justify-between mb-2">
-              <h3 class="font-serif font-bold text-base sm:text-xl text-white">VIP Mobile & Hotel Suite Service</h3>
-              <span class="font-serif font-black text-amber-400 text-base sm:text-xl">from $80</span>
-            </div>
-            <p class="text-xs sm:text-sm text-gray-300 leading-relaxed mb-4">Executive on-location barbering delivered directly to your Las Vegas Strip hotel room, residence, or private event. Full mobile setup with master artisan.</p>
-          </div>
-          <div class="flex items-center justify-between pt-4 border-t border-yellow-600/20">
-            <span class="text-xs text-gray-400"><i class="fa-regular fa-clock mr-1 text-amber-400"></i> 60 mins</span>
-            <a href="tel:7023841453" class="btn-brass px-6 py-2 text-xs">Call (702) 384-1453 For VIP Mobile</a>
           </div>
         </div>
 
@@ -450,153 +242,256 @@
     </div>
   </section>
 
-  <!-- MASTER ARTISANS (MEET THE TEAM) -->
-  <section id="artisans" class="py-16 sm:py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-3xl mx-auto mb-14">
-        <span class="badge-luxe mb-3">The Craftsmen</span>
-        <h2 class="font-serif text-2xl sm:text-5xl font-black text-white">Meet the Master Artisans</h2>
-        <p class="text-gray-400 text-xs sm:text-base mt-2">Book directly with your preferred master barber or walk in any day from 7 AM to 7 PM.</p>
+  <!-- PRINTED-STYLE GROOMING MENU & PRICING (Inspired by The Barbershop LV Lounge Menu) -->
+  <section id="menu" class="py-24">
+    <div class="max-w-6xl mx-auto px-4 sm:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-amber-400 font-mono text-xs uppercase tracking-[0.25em] block mb-3">02. Grooming Menu</span>
+        <h2 class="font-serif font-black text-3xl sm:text-5xl text-white">Curated Services & Pricing</h2>
+        <p class="text-gray-400 text-xs sm:text-sm mt-3 font-mono">Rates reflect starting prices across our master barber staff.</p>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+      <!-- Menu Board -->
+      <div class="editorial-card p-6 sm:p-12 border-2 border-yellow-600/40 bg-[#0a0c12]">
         
-        <!-- Barber 1: Elier -->
-        <div class="card-3d overflow-hidden flex flex-col justify-between group">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-10">
+          
+          <!-- Column 1: Haircuts & Styling -->
           <div>
-            <div class="relative h-60 sm:h-64 overflow-hidden bg-black">
-              <img src="assets/images/barber-master.jpg" alt="Elier Master Barber" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-              <div class="absolute inset-0 bg-gradient-to-t from-[#07090c] via-transparent to-transparent"></div>
-              <span class="absolute top-3 left-3 px-2.5 py-1 rounded bg-amber-400 text-black font-black text-[9px] uppercase tracking-wider">
-                👑 Lead Master Barber
-              </span>
+            <h3 class="font-serif font-bold text-xl text-yellow-400 uppercase tracking-widest border-b border-yellow-600/30 pb-3 mb-6 flex items-center justify-between">
+              <span>Signature Haircuts</span>
+              <i class="fa-solid fa-scissors text-sm text-yellow-500"></i>
+            </h3>
+
+            <!-- Item 1 -->
+            <div class="mb-8">
+              <div class="flex items-baseline justify-between">
+                <span class="font-serif font-bold text-base sm:text-lg text-white">Male Haircut</span>
+                <span class="menu-dots hidden sm:block"></span>
+                <span class="font-mono font-bold text-amber-400 text-base sm:text-lg">from $35</span>
+              </div>
+              <p class="text-xs text-gray-400 mt-1 font-light">Custom precision skin fade, taper, crop, or scissor cut. Includes hot lather razor neck clean-up & styling. (30 min)</p>
             </div>
-            <div class="p-5">
-              <h3 class="font-serif font-bold text-lg text-white">Elier</h3>
-              <p class="text-xs text-amber-400 font-semibold mb-2">Fades & Beard Sculpting Specialist</p>
-              <p class="text-xs text-gray-400 leading-relaxed">Renowned across Downtown Las Vegas for hyper-clean skin fades, sharp beard transitions, and signature razor finishes.</p>
+
+            <!-- Item 2 -->
+            <div class="mb-8">
+              <div class="flex items-baseline justify-between">
+                <span class="font-serif font-bold text-base sm:text-lg text-white">Haircut & Beard Sculpt</span>
+                <span class="menu-dots hidden sm:block"></span>
+                <span class="font-mono font-bold text-amber-400 text-base sm:text-lg">from $65</span>
+              </div>
+              <p class="text-xs text-gray-400 mt-1 font-light">The complete signature package. Full haircut tailored to your profile plus straight razor beard contouring & steamed towel. (45 min)</p>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="mb-8">
+              <div class="flex items-baseline justify-between">
+                <span class="font-serif font-bold text-base sm:text-lg text-white">Kids Cut (10 & Under)</span>
+                <span class="menu-dots hidden sm:block"></span>
+                <span class="font-mono font-bold text-amber-400 text-base sm:text-lg">from $25</span>
+              </div>
+              <p class="text-xs text-gray-400 mt-1 font-light">Sharp, patient children's haircut in a relaxed chair environment. (30 min)</p>
             </div>
           </div>
-          <div class="p-5 pt-0">
-            <a href="https://booksy.com/en-us/705462_boulevard-barber-shop_barber-shop_134764_las-vegas" target="_blank" class="btn-brass w-full py-2.5 text-xs text-center">
+
+          <!-- Column 2: Straight Razor & Beard -->
+          <div>
+            <h3 class="font-serif font-bold text-xl text-yellow-400 uppercase tracking-widest border-b border-yellow-600/30 pb-3 mb-6 flex items-center justify-between">
+              <span>Razor & Beard Atelier</span>
+              <i class="fa-solid fa-hot-tub-person text-sm text-yellow-500"></i>
+            </h3>
+
+            <!-- Item 4 -->
+            <div class="mb-8">
+              <div class="flex items-baseline justify-between">
+                <span class="font-serif font-bold text-base sm:text-lg text-white">Hot Towel Razor Shave</span>
+                <span class="menu-dots hidden sm:block"></span>
+                <span class="font-mono font-bold text-amber-400 text-base sm:text-lg">from $30</span>
+              </div>
+              <p class="text-xs text-gray-400 mt-1 font-light">Traditional multi-pass straight razor shave with essential oil steamed towels and soothing tonic. (30 min)</p>
+            </div>
+
+            <!-- Item 5 -->
+            <div class="mb-8">
+              <div class="flex items-baseline justify-between">
+                <span class="font-serif font-bold text-base sm:text-lg text-white">Beard Shaping & Razor Edge</span>
+                <span class="menu-dots hidden sm:block"></span>
+                <span class="font-mono font-bold text-amber-400 text-base sm:text-lg">from $30</span>
+              </div>
+              <p class="text-xs text-gray-400 mt-1 font-light">Length reduction, cheek/jawline razor defining, and hot towel treatment with beard oil. (30 min)</p>
+            </div>
+
+            <!-- Item 6 -->
+            <div class="mb-8">
+              <div class="flex items-baseline justify-between">
+                <span class="font-serif font-bold text-base sm:text-lg text-white">Razor Head Shave</span>
+                <span class="menu-dots hidden sm:block"></span>
+                <span class="font-mono font-bold text-amber-400 text-base sm:text-lg">from $30</span>
+              </div>
+              <p class="text-xs text-gray-400 mt-1 font-light">Full scalp straight razor shave with hot lather and moisturizing post-shave scalp treatment. (30 min)</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- VIP Mobile Strip -->
+        <div class="mt-8 pt-8 border-t border-yellow-600/30 flex flex-col sm:flex-row items-center justify-between gap-4 bg-black/50 p-6 rounded">
+          <div>
+            <span class="font-serif font-bold text-white text-base sm:text-lg">VIP Hotel Suite & Mobile Service</span>
+            <p class="text-xs text-gray-400 mt-0.5">Master barber dispatched directly to your Las Vegas Strip hotel room or residence.</p>
+          </div>
+          <div class="flex items-center space-x-4">
+            <span class="font-mono font-bold text-amber-400 text-lg">from $80</span>
+            <a href="tel:7023841453" class="btn-noir-outline px-4 py-2 text-xs">Call (702) 384-1453</a>
+          </div>
+        </div>
+
+        <!-- Booksy CTA Footnote -->
+        <div class="text-center mt-10">
+          <a href="https://booksy.com/en-us/705462_boulevard-barber-shop_barber-shop_134764_las-vegas" target="_blank" rel="noopener noreferrer" class="btn-gold-luxe px-12 py-4 text-sm font-bold shadow-xl">
+            <i class="fa-solid fa-calendar-check mr-2"></i> Book Any Service Online on Booksy
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MASTER ARTISANS ROSTER (Editorial Magazine Cards) -->
+  <section id="artisans" class="py-24 bg-[#080a0f] border-y border-yellow-600/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-amber-400 font-mono text-xs uppercase tracking-[0.25em] block mb-3">03. The Craftsmen</span>
+        <h2 class="font-serif font-black text-3xl sm:text-5xl text-white">The Master Artisans</h2>
+        <p class="text-gray-400 text-xs sm:text-sm mt-3 font-mono">Select your chair or walk in any day from 7 AM to 7 PM.</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Artisan 1: Elier -->
+        <div class="editorial-card group">
+          <div class="relative h-72 overflow-hidden bg-black">
+            <img src="assets/images/barber-master.jpg" alt="Elier" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0c0e14] via-transparent to-transparent"></div>
+            <span class="absolute top-3 left-3 px-2.5 py-1 bg-yellow-500 text-black font-mono font-bold text-[9px] uppercase tracking-wider rounded">
+              CHAIR 01
+            </span>
+          </div>
+          <div class="p-6">
+            <h3 class="font-serif font-bold text-xl text-white">Elier</h3>
+            <p class="text-xs text-amber-400 font-mono uppercase tracking-wider mb-3">Fades & Beard Sculpting</p>
+            <p class="text-xs text-gray-400 font-light leading-relaxed mb-6">Known for surgical precision on skin fades and razor-sharp beard transitions.</p>
+            <a href="https://booksy.com/en-us/705462_boulevard-barber-shop_barber-shop_134764_las-vegas" target="_blank" class="btn-gold-luxe w-full py-2.5 text-xs text-center">
               Book with Elier
             </a>
           </div>
         </div>
 
-        <!-- Barber 2: Bryan -->
-        <div class="card-3d overflow-hidden flex flex-col justify-between group">
-          <div>
-            <div class="relative h-60 sm:h-64 overflow-hidden bg-black">
-              <img src="assets/images/crew-lasvegas.jpg" alt="Bryan Lorenzo Otero" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-              <div class="absolute inset-0 bg-gradient-to-t from-[#07090c] via-transparent to-transparent"></div>
-              <span class="absolute top-3 left-3 px-2.5 py-1 rounded bg-amber-400 text-black font-black text-[9px] uppercase tracking-wider">
-                ✂ Precision Specialist
-              </span>
-            </div>
-            <div class="p-5">
-              <h3 class="font-serif font-bold text-lg text-white">Bryan Lorenzo Otero</h3>
-              <p class="text-xs text-amber-400 font-semibold mb-2">Modern Crops & Tapers</p>
-              <p class="text-xs text-gray-400 leading-relaxed">Expert in textured modern crops, low drop fades, and custom scissor work tailored to personal style.</p>
-            </div>
+        <!-- Artisan 2: Bryan -->
+        <div class="editorial-card group">
+          <div class="relative h-72 overflow-hidden bg-black">
+            <img src="assets/images/crew-lasvegas.jpg" alt="Bryan Lorenzo Otero" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0c0e14] via-transparent to-transparent"></div>
+            <span class="absolute top-3 left-3 px-2.5 py-1 bg-yellow-500 text-black font-mono font-bold text-[9px] uppercase tracking-wider rounded">
+              CHAIR 02
+            </span>
           </div>
-          <div class="p-5 pt-0">
-            <a href="https://booksy.com/en-us/705462_boulevard-barber-shop_barber-shop_134764_las-vegas" target="_blank" class="btn-brass w-full py-2.5 text-xs text-center">
+          <div class="p-6">
+            <h3 class="font-serif font-bold text-xl text-white">Bryan Lorenzo Otero</h3>
+            <p class="text-xs text-amber-400 font-mono uppercase tracking-wider mb-3">Crops & Drop Fades</p>
+            <p class="text-xs text-gray-400 font-light leading-relaxed mb-6">Master of textured modern crops, low tapers, and tailored scissor silhouettes.</p>
+            <a href="https://booksy.com/en-us/705462_boulevard-barber-shop_barber-shop_134764_las-vegas" target="_blank" class="btn-gold-luxe w-full py-2.5 text-xs text-center">
               Book with Bryan
             </a>
           </div>
         </div>
 
-        <!-- Barber 3: Lay -->
-        <div class="card-3d overflow-hidden flex flex-col justify-between group">
-          <div>
-            <div class="relative h-60 sm:h-64 overflow-hidden bg-black">
-              <img src="assets/images/beard-shave.jpg" alt="Ramírez Lay Jiménez" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-              <div class="absolute inset-0 bg-gradient-to-t from-[#07090c] via-transparent to-transparent"></div>
-              <span class="absolute top-3 left-3 px-2.5 py-1 rounded bg-amber-400 text-black font-black text-[9px] uppercase tracking-wider">
-                🪒 Straight Razor Artisan
-              </span>
-            </div>
-            <div class="p-5">
-              <h3 class="font-serif font-bold text-lg text-white">Ramírez Lay Jiménez</h3>
-              <p class="text-xs text-amber-400 font-semibold mb-2">Traditional Hot Towel Shaves</p>
-              <p class="text-xs text-gray-400 leading-relaxed">Master of the traditional hot towel straight-razor shave, razor head shaving, and executive lineups.</p>
-            </div>
+        <!-- Artisan 3: Lay -->
+        <div class="editorial-card group">
+          <div class="relative h-72 overflow-hidden bg-black">
+            <img src="assets/images/beard-shave.jpg" alt="Ramírez Lay Jiménez" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0c0e14] via-transparent to-transparent"></div>
+            <span class="absolute top-3 left-3 px-2.5 py-1 bg-yellow-500 text-black font-mono font-bold text-[9px] uppercase tracking-wider rounded">
+              CHAIR 03
+            </span>
           </div>
-          <div class="p-5 pt-0">
-            <a href="https://booksy.com/en-us/705462_boulevard-barber-shop_barber-shop_134764_las-vegas" target="_blank" class="btn-brass w-full py-2.5 text-xs text-center">
+          <div class="p-6">
+            <h3 class="font-serif font-bold text-xl text-white">Ramírez Lay Jiménez</h3>
+            <p class="text-xs text-amber-400 font-mono uppercase tracking-wider mb-3">Straight Razor Shaves</p>
+            <p class="text-xs text-gray-400 font-light leading-relaxed mb-6">Specialist in authentic hot towel straight razor shaves and executive lineups.</p>
+            <a href="https://booksy.com/en-us/705462_boulevard-barber-shop_barber-shop_134764_las-vegas" target="_blank" class="btn-gold-luxe w-full py-2.5 text-xs text-center">
               Book with Lay
             </a>
           </div>
         </div>
 
-        <!-- Barber 4: Henry -->
-        <div class="card-3d overflow-hidden flex flex-col justify-between group">
-          <div>
-            <div class="relative h-60 sm:h-64 overflow-hidden bg-black">
-              <img src="assets/images/hair-design.jpg" alt="Henry Classic V." class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-              <div class="absolute inset-0 bg-gradient-to-t from-[#07090c] via-transparent to-transparent"></div>
-              <span class="absolute top-3 left-3 px-2.5 py-1 rounded bg-amber-400 text-black font-black text-[9px] uppercase tracking-wider">
-                💈 Classic Styling
-              </span>
-            </div>
-            <div class="p-5">
-              <h3 class="font-serif font-bold text-lg text-white">Henry 'Classic' V.</h3>
-              <p class="text-xs text-amber-400 font-semibold mb-2">Executive Haircuts & Pomps</p>
-              <p class="text-xs text-gray-400 leading-relaxed">Specializing in timeless gentleman's scissor cuts, pompadours, side parts, and detailed beard contouring.</p>
-            </div>
+        <!-- Artisan 4: Henry -->
+        <div class="editorial-card group">
+          <div class="relative h-72 overflow-hidden bg-black">
+            <img src="assets/images/hair-design.jpg" alt="Henry Classic V." class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0c0e14] via-transparent to-transparent"></div>
+            <span class="absolute top-3 left-3 px-2.5 py-1 bg-yellow-500 text-black font-mono font-bold text-[9px] uppercase tracking-wider rounded">
+              CHAIR 04
+            </span>
           </div>
-          <div class="p-5 pt-0">
-            <a href="https://booksy.com/en-us/705462_boulevard-barber-shop_barber-shop_134764_las-vegas" target="_blank" class="btn-brass w-full py-2.5 text-xs text-center">
+          <div class="p-6">
+            <h3 class="font-serif font-bold text-xl text-white">Henry 'Classic' V.</h3>
+            <p class="text-xs text-amber-400 font-mono uppercase tracking-wider mb-3">Classic Scissor Cuts</p>
+            <p class="text-xs text-gray-400 font-light leading-relaxed mb-6">Expert in timeless gentleman's cuts, pompadours, and detailed beard shaping.</p>
+            <a href="https://booksy.com/en-us/705462_boulevard-barber-shop_barber-shop_134764_las-vegas" target="_blank" class="btn-gold-luxe w-full py-2.5 text-xs text-center">
               Book with Henry
             </a>
           </div>
         </div>
 
       </div>
+
     </div>
   </section>
 
-  <!-- LOOKBOOK GALLERY WITH LIGHTBOX -->
-  <section id="lookbook" class="py-16 sm:py-20 bg-surface/40 border-y border-yellow-600/20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+  <!-- LOOKBOOK GALLERY -->
+  <section id="gallery" class="py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
         <div>
-          <span class="badge-luxe mb-3">Craftsmanship Gallery</span>
-          <h2 class="font-serif text-2xl sm:text-5xl font-black text-white">Signature Cuts Lookbook</h2>
-          <p class="text-gray-400 text-xs sm:text-base mt-2">Authentic work captured fresh from our chairs in Downtown Las Vegas.</p>
+          <span class="text-amber-400 font-mono text-xs uppercase tracking-[0.25em] block mb-3">04. The Gallery</span>
+          <h2 class="font-serif font-black text-3xl sm:text-5xl text-white">Signature Cuts Lookbook</h2>
         </div>
         <div class="mt-4 md:mt-0">
-          <a href="https://booksy.com/en-us/705462_boulevard-barber-shop_barber-shop_134764_las-vegas" target="_blank" class="btn-glass-outline px-5 py-2.5 text-xs">
-            <i class="fa-solid fa-camera text-amber-400 mr-2"></i> Book One of These Cuts
+          <a href="https://booksy.com/en-us/705462_boulevard-barber-shop_barber-shop_134764_las-vegas" target="_blank" class="btn-noir-outline px-6 py-2.5 text-xs">
+            <i class="fa-solid fa-camera text-amber-400 mr-2"></i> Book A Look
           </a>
         </div>
       </div>
 
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
         
-        <div class="lookbook-item card-3d cursor-pointer group h-52 sm:h-64 overflow-hidden rounded-xl" data-src="assets/images/fade-textured.jpg" data-caption="Mid Skin Fade with Textured Top by Boulevard Barber Shop">
+        <div class="gallery-zoom-item editorial-card cursor-pointer group h-64 overflow-hidden rounded" data-img="assets/images/fade-textured.jpg" data-title="Mid Skin Fade with Textured Top">
           <img src="assets/images/fade-textured.jpg" alt="Mid Skin Fade" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
           <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
             <i class="fa-solid fa-expand text-yellow-400 text-xl"></i>
           </div>
         </div>
 
-        <div class="lookbook-item card-3d cursor-pointer group h-52 sm:h-64 overflow-hidden rounded-xl" data-src="assets/images/low-taper-beard.jpg" data-caption="Low Taper Fade with Sculpted Beard by Boulevard Barber Shop">
+        <div class="gallery-zoom-item editorial-card cursor-pointer group h-64 overflow-hidden rounded" data-img="assets/images/low-taper-beard.jpg" data-title="Low Taper Fade & Sculpted Beard">
           <img src="assets/images/low-taper-beard.jpg" alt="Low Taper with Beard" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
           <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
             <i class="fa-solid fa-expand text-yellow-400 text-xl"></i>
           </div>
         </div>
 
-        <div class="lookbook-item card-3d cursor-pointer group h-52 sm:h-64 overflow-hidden rounded-xl" data-src="assets/images/mid-drop-fade.jpg" data-caption="Drop Fade & Precision Edge Lineup by Boulevard Barber Shop">
+        <div class="gallery-zoom-item editorial-card cursor-pointer group h-64 overflow-hidden rounded" data-img="assets/images/mid-drop-fade.jpg" data-title="Drop Fade & Precision Razor Lineup">
           <img src="assets/images/mid-drop-fade.jpg" alt="Drop Fade" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
           <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
             <i class="fa-solid fa-expand text-yellow-400 text-xl"></i>
           </div>
         </div>
 
-        <div class="lookbook-item card-3d cursor-pointer group h-52 sm:h-64 overflow-hidden rounded-xl" data-src="assets/images/beard-shave.jpg" data-caption="Hot Lather Straight Razor Shave & Beard Contour by Boulevard Barber Shop">
+        <div class="gallery-zoom-item editorial-card cursor-pointer group h-64 overflow-hidden rounded" data-img="assets/images/beard-shave.jpg" data-title="Hot Lather Straight Razor Shave">
           <img src="assets/images/beard-shave.jpg" alt="Hot Towel Shave" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
           <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
             <i class="fa-solid fa-expand text-yellow-400 text-xl"></i>
@@ -604,118 +499,66 @@
         </div>
 
       </div>
+
     </div>
   </section>
 
-  <!-- VERIFIED CLIENT REVIEWS -->
-  <section id="reviews" class="py-16 sm:py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-3xl mx-auto mb-14">
-        <span class="badge-luxe mb-3">Client Testimonials</span>
-        <h2 class="font-serif text-2xl sm:text-5xl font-black text-white">Rated 5.0 in Downtown Vegas</h2>
-        <p class="text-gray-400 text-xs sm:text-base mt-2">Read genuine experiences from our regulars and visitors.</p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
-        
-        <div class="card-3d p-5 sm:p-6 flex flex-col justify-between">
-          <div>
-            <div class="text-amber-400 text-sm mb-3">★★★★★</div>
-            <p class="text-xs sm:text-sm text-gray-300 leading-relaxed italic mb-4">
-              "Best barbershop in Downtown Las Vegas hands down. Elier gave me the cleanest taper fade and beard sculpt I've ever had. The hot towel finish is pure luxury."
-            </p>
-          </div>
-          <div class="pt-4 border-t border-yellow-600/20 flex items-center justify-between text-xs">
-            <span class="font-bold text-white">Marcus Sterling</span>
-            <span class="text-gray-400">Verified Client</span>
-          </div>
-        </div>
-
-        <div class="card-3d p-5 sm:p-6 flex flex-col justify-between">
-          <div>
-            <div class="text-amber-400 text-sm mb-3">★★★★★</div>
-            <p class="text-xs sm:text-sm text-gray-300 leading-relaxed italic mb-4">
-              "Open early at 7 AM which is a lifesaver before business meetings. Bryan did an amazing job on my scissor crop and line-up. Unbeatable consistency."
-            </p>
-          </div>
-          <div class="pt-4 border-t border-yellow-600/20 flex items-center justify-between text-xs">
-            <span class="font-bold text-white">David K.</span>
-            <span class="text-gray-400">Local Regular</span>
-          </div>
-        </div>
-
-        <div class="card-3d p-5 sm:p-6 flex flex-col justify-between">
-          <div>
-            <div class="text-amber-400 text-sm mb-3">★★★★★</div>
-            <p class="text-xs sm:text-sm text-gray-300 leading-relaxed italic mb-4">
-              "Walked in on a Sunday afternoon and was seated within 10 minutes. Lay took his time with the hot lather straight razor shave. Authentic barbershop craft at its finest."
-            </p>
-          </div>
-          <div class="pt-4 border-t border-yellow-600/20 flex items-center justify-between text-xs">
-            <span class="font-bold text-white">Anthony R.</span>
-            <span class="text-gray-400">Verified Client</span>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- LOCATION & HOURS (DOWNTOWN LAS VEGAS) -->
-  <section id="location" class="py-16 sm:py-20 bg-surface/50 border-t border-yellow-600/20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <!-- LOCATION & VISIT CONCIERGE -->
+  <section id="location" class="py-24 bg-[#080a0f] border-t border-yellow-600/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8">
       
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
         
-        <!-- Info Card -->
-        <div class="lg:col-span-5 card-3d p-6 sm:p-8 flex flex-col justify-between">
+        <!-- Left Vault Details -->
+        <div class="lg:col-span-5 editorial-card p-8 flex flex-col justify-between">
           <div>
-            <span class="badge-luxe mb-4">Downtown Atelier</span>
-            <h2 class="font-serif text-2xl sm:text-4xl font-black text-white mb-6">Visit Our Shop</h2>
+            <span class="text-amber-400 font-mono text-xs uppercase tracking-[0.25em] block mb-3">05. Visit The Shop</span>
+            <h2 class="font-serif font-black text-3xl sm:text-4xl text-white mb-6">906 S 6th St #105</h2>
 
-            <div class="space-y-4 text-xs sm:text-sm text-gray-300">
+            <div class="space-y-5 text-sm text-gray-300">
               <div class="flex items-start space-x-3">
                 <i class="fa-solid fa-location-dot text-amber-400 text-base mt-1"></i>
                 <div>
-                  <p class="font-bold text-white text-base">906 S 6th St #105</p>
+                  <p class="font-bold text-white text-base">Boulevard Barber Shop</p>
+                  <p class="text-gray-400">906 S 6th St, Suite 105</p>
                   <p class="text-gray-400">Las Vegas, NV 89101</p>
-                  <p class="text-amber-400 text-xs mt-0.5 font-semibold">Historic 6th St Commercial District (S 6th St & E Charleston Blvd)</p>
+                  <p class="text-amber-400 text-xs mt-1 font-mono">Historic 6th St & E Charleston Blvd</p>
                 </div>
               </div>
 
               <div class="flex items-center space-x-3">
                 <i class="fa-solid fa-phone text-amber-400 text-base"></i>
-                <a href="tel:7023841453" class="font-bold text-white hover:text-amber-400 transition-colors text-base">(702) 384-1453</a>
+                <a href="tel:7023841453" class="font-bold text-white hover:text-amber-400 transition-colors text-base font-mono">(702) 384-1453</a>
               </div>
 
-              <div class="pt-6 border-t border-yellow-600/20">
-                <p class="font-display font-bold uppercase text-xs tracking-wider text-amber-400 mb-3">Operating Hours (Open 7 Days)</p>
-                <div class="flex items-center justify-between text-xs sm:text-sm py-1.5 border-b border-white/5">
-                  <span class="text-gray-300">Monday – Sunday</span>
+              <div class="pt-6 border-t border-yellow-600/20 font-mono text-xs">
+                <p class="uppercase text-amber-400 font-bold mb-2 tracking-wider">Hours of Operation</p>
+                <div class="flex justify-between py-1 border-b border-white/5">
+                  <span>Monday – Sunday</span>
                   <span class="font-bold text-amber-400">7:00 AM – 7:00 PM</span>
                 </div>
-                <p class="text-xs text-gray-400 mt-2">Walk-ins welcomed daily. Bookings recommended on weekends.</p>
+                <p class="text-gray-400 mt-2 text-[11px]">Walk-ins welcome all 7 days. Bookings recommended.</p>
               </div>
             </div>
           </div>
 
-          <div class="grid grid-cols-2 gap-3 pt-6 border-t border-yellow-600/20 mt-6">
-            <a href="https://maps.google.com/?q=906+S+6th+St+105+Las+Vegas+NV+89101" target="_blank" rel="noopener noreferrer" class="btn-brass py-3 text-center text-xs">
+          <div class="grid grid-cols-2 gap-3 pt-6 border-t border-yellow-600/20 mt-8">
+            <a href="https://maps.google.com/?q=906+S+6th+St+105+Las+Vegas+NV+89101" target="_blank" rel="noopener noreferrer" class="btn-gold-luxe py-3 text-center text-xs">
               <i class="fa-solid fa-diamond-turn-right mr-1.5"></i> Google Maps
             </a>
-            <a href="https://maps.apple.com/?address=906+S+6th+St+105,Las+Vegas,NV+89101" target="_blank" rel="noopener noreferrer" class="btn-glass-outline py-3 text-center text-xs">
+            <a href="https://maps.apple.com/?address=906+S+6th+St+105,Las+Vegas,NV+89101" target="_blank" rel="noopener noreferrer" class="btn-noir-outline py-3 text-center text-xs">
               <i class="fa-brands fa-apple mr-1.5"></i> Apple Maps
             </a>
           </div>
         </div>
 
-        <!-- Map Embed -->
-        <div class="lg:col-span-7 card-3d overflow-hidden min-h-[360px] p-0">
+        <!-- Right Embedded Map -->
+        <div class="lg:col-span-7 editorial-card overflow-hidden min-h-[380px] p-0">
           <iframe 
             src="https://maps.google.com/maps?q=906%20S%206th%20St%20%23105%20Las%20Vegas%20NV%2089101&t=&z=15&ie=UTF8&iwloc=&output=embed" 
             width="100%" 
             height="100%" 
-            style="border:0; min-height: 380px; filter: grayscale(1) invert(0.92) contrast(1.2);" 
+            style="border:0; min-height: 400px; filter: grayscale(1) invert(0.92) contrast(1.2);" 
             allowfullscreen="" 
             loading="lazy" 
             referrerpolicy="no-referrer-when-downgrade"
@@ -729,39 +572,39 @@
   </section>
 
   <!-- FOOTER -->
-  <footer class="bg-[#050608] py-12 border-t border-yellow-600/20 text-xs text-gray-400">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+  <footer class="bg-black py-12 border-t border-yellow-600/20 text-xs text-gray-500 font-mono">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
       <div>
-        <span class="font-serif font-black text-white text-base">BOULEVARD BARBER SHOP</span>
-        <p class="mt-1 text-gray-500">906 S 6th St #105, Las Vegas, NV 89101 • Phone: (702) 384-1453</p>
+        <span class="font-serif font-bold text-white text-sm">BOULEVARD BARBER SHOP</span>
+        <p class="mt-1">906 S 6th St #105, Las Vegas, NV 89101 • (702) 384-1453</p>
       </div>
       <div>
-        <p>© 2026 Boulevard Barber Shop. All rights reserved. Open 7 Days: 7:00 AM – 7:00 PM.</p>
+        <p>© 2026 Boulevard Barber Shop. Open 7 Days: 7:00 AM – 7:00 PM.</p>
       </div>
     </div>
   </footer>
 
-  <!-- PERSISTENT MOBILE CONCIERGE BAR -->
-  <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#07090c]/95 backdrop-blur-xl border-t border-yellow-600/30 px-3 py-2 flex items-center justify-between gap-2 max-w-full overflow-hidden">
-    <a href="tel:7023841453" class="flex-1 btn-glass-outline py-2.5 text-xs text-center">
-      <i class="fa-solid fa-phone text-amber-400 mr-1"></i> Call Shop
+  <!-- PERSISTENT MOBILE ACTION BAR -->
+  <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-black/95 backdrop-blur-xl border-t border-yellow-600/30 px-3 py-2 flex items-center justify-between gap-2 max-w-full overflow-hidden">
+    <a href="tel:7023841453" class="flex-1 btn-noir-outline py-2.5 text-xs text-center">
+      <i class="fa-solid fa-phone text-amber-400 mr-1"></i> Call
     </a>
-    <a href="https://maps.google.com/?q=906+S+6th+St+105+Las+Vegas+NV+89101" target="_blank" class="flex-1 btn-glass-outline py-2.5 text-xs text-center">
-      <i class="fa-solid fa-location-dot text-amber-400 mr-1"></i> Directions
+    <a href="https://maps.google.com/?q=906+S+6th+St+105+Las+Vegas+NV+89101" target="_blank" class="flex-1 btn-noir-outline py-2.5 text-xs text-center">
+      <i class="fa-solid fa-location-dot text-amber-400 mr-1"></i> Map
     </a>
-    <a href="https://booksy.com/en-us/705462_boulevard-barber-shop_barber-shop_134764_las-vegas" target="_blank" class="flex-2 btn-brass py-2.5 px-4 text-xs text-center font-black">
+    <a href="https://booksy.com/en-us/705462_boulevard-barber-shop_barber-shop_134764_las-vegas" target="_blank" class="flex-2 btn-gold-luxe py-2.5 px-4 text-xs text-center font-bold">
       <i class="fa-solid fa-calendar-check mr-1"></i> Book Chair
     </a>
   </div>
 
   <!-- LIGHTBOX MODAL -->
-  <div id="lightbox-modal" class="fixed inset-0 z-50 modal-backdrop-blur hidden items-center justify-center p-4">
-    <div class="relative max-w-3xl w-full card-3d p-2">
-      <button id="close-lightbox" class="absolute top-4 right-4 z-10 w-8 h-8 rounded-full bg-black/80 text-white flex items-center justify-center hover:text-amber-400">
+  <div id="lightbox-modal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-xl hidden items-center justify-center p-4">
+    <div class="relative max-w-3xl w-full editorial-card p-2">
+      <button id="close-lightbox" class="absolute top-4 right-4 z-10 w-8 h-8 rounded-full bg-black text-white flex items-center justify-center hover:text-amber-400 border border-white/20">
         <i class="fa-solid fa-xmark"></i>
       </button>
-      <img id="lightbox-img" src="" alt="Lookbook Zoom" class="w-full h-auto max-h-[80vh] object-contain rounded-lg">
-      <p id="lightbox-caption" class="text-xs text-center text-gray-300 py-3 px-4 font-semibold"></p>
+      <img id="lightbox-img" src="" alt="Lookbook Zoom" class="w-full h-auto max-h-[80vh] object-contain rounded">
+      <p id="lightbox-caption" class="text-xs text-center text-gray-300 py-3 font-mono font-bold"></p>
     </div>
   </div>
 
