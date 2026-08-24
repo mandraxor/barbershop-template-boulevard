@@ -1,0 +1,378 @@
+{
+  "theme": "dark-gold",
+  "design": {
+    "palette": "speakeasy-heritage",
+    "style": "classic-speakeasy",
+    "enableDemoToolbar": false
+  },
+  "business": {
+    "name": "Boulevard Barber Shop",
+    "shortName": "Boulevard Barbershop",
+    "monogram": "BBS",
+    "badge": "LV",
+    "tagline": "Precision Cuts & Classic Shaves on Historic 6th Street.",
+    "subTagline": "Downtown Las Vegas Traditional & Modern Grooming Lounge",
+    "description": "Boulevard Barber Shop is Downtown Las Vegas premier traditional and modern grooming lounge located at 906 S 6th St. Specializing in precision skin fades, beard shaping, hot towel straight-razor shaves, and clean scissor cuts.",
+    "phone": "(702) 384-1453",
+    "phoneRaw": "7023841453",
+    "email": "contact@boulevardbarbershoplv.com",
+    "website": "https://booksy.com/en-us/705462_boulevard-barber-shop_barber-shop_134708_las-vegas",
+    "address": "906 S 6th St #105, Las Vegas, NV 89101",
+    "crossStreets": "S 6th St & E Charleston Blvd",
+    "city": "Las Vegas",
+    "state": "NV",
+    "zip": "89101",
+    "plaza": "Historic 6th Street Commercial Center",
+    "bookingUrl": "https://booksy.com/en-us/705462_boulevard-barber-shop_barber-shop_134708_las-vegas",
+    "booksyUrl": "https://booksy.com/en-us/705462_boulevard-barber-shop_barber-shop_134708_las-vegas",
+    "instagram": "boulevardbarbershoplv",
+    "instagramUrl": "https://www.instagram.com/boulevardbarbershoplv/",
+    "promoCode": "BOULEVARD10",
+    "promoDiscount": "10% OFF",
+    "experienceImage": "assets/images/lounge-interior.jpg"
+  },
+  "shop": {
+    "name": "Boulevard Barber Shop",
+    "shortName": "Boulevard Barbershop",
+    "monogram": "BBS",
+    "badge": "LV",
+    "tagline": "Precision Cuts & Classic Shaves on Historic 6th Street.",
+    "subTagline": "Downtown Las Vegas Traditional & Modern Grooming Lounge",
+    "description": "Boulevard Barber Shop is Downtown Las Vegas premier traditional and modern grooming lounge located at 906 S 6th St. Specializing in precision skin fades, beard shaping, hot towel straight-razor shaves, and clean scissor cuts.",
+    "phone": "(702) 384-1453",
+    "phoneRaw": "7023841453",
+    "email": "contact@boulevardbarbershoplv.com",
+    "website": "https://booksy.com/en-us/705462_boulevard-barber-shop_barber-shop_134708_las-vegas",
+    "instagram": "boulevardbarbershoplv",
+    "instagramUrl": "https://www.instagram.com/boulevardbarbershoplv/",
+    "booksyUrl": "https://booksy.com/en-us/705462_boulevard-barber-shop_barber-shop_134708_las-vegas",
+    "bookingUrl": "https://booksy.com/en-us/705462_boulevard-barber-shop_barber-shop_134708_las-vegas",
+    "promoCode": "BOULEVARD10",
+    "promoDiscount": "10% OFF",
+    "experienceImage": "assets/images/lounge-interior.jpg"
+  },
+  "location": {
+    "plaza": "Historic 6th Street Commercial Center",
+    "address": "906 S 6th St #105",
+    "crossStreet": "S 6th St & E Charleston Blvd",
+    "crossStreets": "S 6th St & E Charleston Blvd",
+    "city": "Las Vegas",
+    "state": "NV",
+    "zip": "89101",
+    "country": "US",
+    "neighborhood": "Downtown Las Vegas",
+    "googleMapsUrl": "https://maps.google.com/?q=906+S+6th+St+Ste+105+Las+Vegas+NV+89101",
+    "appleMapsUrl": "https://maps.apple.com/?address=906+S+6th+St+Ste+105,Las+Vegas,NV+89101",
+    "coordinates": {
+      "lat": 36.1593,
+      "lng": -115.1437
+    }
+  },
+  "hours": {
+    "timezone": "America/Los_Angeles",
+    "schedule": {
+      "monday_saturday": {
+        "days": "Monday – Saturday",
+        "open": "7:00 AM",
+        "close": "7:00 PM",
+        "open24h": "07:00",
+        "close24h": "19:00"
+      },
+      "sunday": {
+        "days": "Sunday",
+        "open": "8:00 AM",
+        "close": "5:00 PM",
+        "open24h": "08:00",
+        "close24h": "17:00"
+      }
+    },
+    "walkinPolicy": "Walk-ins Welcome Daily • Appointments Recommended"
+  },
+  "barbers": [
+    {
+      "name": "Elier",
+      "shortName": "Elier",
+      "initials": "EB",
+      "title": "Master Barber & Razor Specialist",
+      "role": "Master Barber & Razor Specialist",
+      "badge": "👑 MASTER BARBER & RAZOR SPECIALIST",
+      "specialties": "Precision Skin Fades, Straight-Razor Shaves, Beard Sculpting",
+      "rating": "5.0",
+      "experience": "10+ Years Exp",
+      "highlight": "Renowned for immaculate razor skin fades, beard contouring, and hot towel straight-razor treatments.",
+      "image": "assets/images/barber-master.jpg",
+      "instagram": "boulevardbarbershoplv"
+    },
+    {
+      "name": "Bryan Lorenzo Otero",
+      "shortName": "Bryan",
+      "initials": "BO",
+      "title": "Senior Barber & Beard Sculptor",
+      "role": "Senior Barber & Beard Sculptor",
+      "badge": "✂️ SENIOR BARBER & BEARD ARTIST",
+      "specialties": "Scissor Craft, Beard Sculpting, Low Tapers",
+      "rating": "5.0",
+      "experience": "8+ Years Exp",
+      "highlight": "Specialist in classic scissor work, custom low tapers, and detailed beard shaping.",
+      "image": "assets/images/beard-shave.jpg",
+      "instagram": "boulevardbarbershoplv"
+    },
+    {
+      "name": "Ramírez Lay Jiménez",
+      "shortName": "Lay",
+      "initials": "RJ",
+      "title": "Precision Stylist & Fade Specialist",
+      "role": "Precision Stylist & Fade Specialist",
+      "badge": "👑 PRECISION STYLIST & FADE SPECIALIST",
+      "specialties": "Burst Fades, Textured Crops, Sharp Lineups",
+      "rating": "5.0",
+      "experience": "9+ Years Exp",
+      "highlight": "Known for razor-sharp edge line-ups, textured crops, and seamless drop fades.",
+      "image": "assets/images/fade-textured.jpg",
+      "instagram": "boulevardbarbershoplv"
+    },
+    {
+      "name": "Henry Classic V.",
+      "shortName": "Henry",
+      "initials": "HV",
+      "title": "Traditional Master Craftsman",
+      "role": "Traditional Master Craftsman",
+      "badge": "🎨 TRADITIONAL MASTER CRAFTSMAN",
+      "specialties": "Head Shaves, Classic Gentlemen Cuts, Hot Towels",
+      "rating": "5.0",
+      "experience": "12+ Years Exp",
+      "highlight": "Master of classic gentlemen grooming, flawless head shaves, and old-school hot towel pampering.",
+      "image": "assets/images/hair-design.jpg",
+      "instagram": "boulevardbarbershoplv"
+    }
+  ],
+  "team": {
+    "owners": [
+      {
+        "name": "Elier",
+        "shortName": "Elier",
+        "initials": "EB",
+        "title": "Master Barber & Razor Specialist",
+        "role": "Master Barber & Razor Specialist",
+        "badge": "👑 MASTER BARBER & RAZOR SPECIALIST",
+        "specialty": "Precision Skin Fades, Straight-Razor Shaves, Beard Sculpting",
+        "experience": "10+ Years Exp",
+        "highlight": "Renowned for immaculate razor skin fades, beard contouring, and hot towel straight-razor treatments.",
+        "image": "assets/images/barber-master.jpg",
+        "instagram": "boulevardbarbershoplv"
+      }
+    ],
+    "barbers": [
+      {
+        "name": "Bryan Lorenzo Otero",
+        "shortName": "Bryan",
+        "initials": "BO",
+        "title": "Senior Barber & Beard Sculptor",
+        "role": "Senior Barber & Beard Sculptor",
+        "badge": "✂️ SENIOR BARBER & BEARD ARTIST",
+        "specialty": "Scissor Craft, Beard Sculpting, Low Tapers",
+        "experience": "8+ Years Exp",
+        "highlight": "Specialist in classic scissor work, custom low tapers, and detailed beard shaping.",
+        "image": "assets/images/beard-shave.jpg",
+        "instagram": "boulevardbarbershoplv"
+      },
+      {
+        "name": "Ramírez Lay Jiménez",
+        "shortName": "Lay",
+        "initials": "RJ",
+        "title": "Precision Stylist & Fade Specialist",
+        "role": "Precision Stylist & Fade Specialist",
+        "badge": "👑 PRECISION STYLIST & FADE SPECIALIST",
+        "specialty": "Burst Fades, Textured Crops, Sharp Lineups",
+        "experience": "9+ Years Exp",
+        "highlight": "Known for razor-sharp edge line-ups, textured crops, and seamless drop fades.",
+        "image": "assets/images/fade-textured.jpg",
+        "instagram": "boulevardbarbershoplv"
+      },
+      {
+        "name": "Henry Classic V.",
+        "shortName": "Henry",
+        "initials": "HV",
+        "title": "Traditional Master Craftsman",
+        "role": "Traditional Master Craftsman",
+        "badge": "🎨 TRADITIONAL MASTER CRAFTSMAN",
+        "specialty": "Head Shaves, Classic Gentlemen Cuts, Hot Towels",
+        "experience": "12+ Years Exp",
+        "highlight": "Master of classic gentlemen grooming, flawless head shaves, and old-school hot towel pampering.",
+        "image": "assets/images/hair-design.jpg",
+        "instagram": "boulevardbarbershoplv"
+      }
+    ]
+  },
+  "services": [
+    {
+      "key": "haircut",
+      "name": "Male Haircut",
+      "price": 35,
+      "duration": 40,
+      "icon": "fa-scissors",
+      "popular": true,
+      "description": "Precision tailored haircut, neck taper, sharp razor finish, and styled with premium matte pomade."
+    },
+    {
+      "key": "haircut_beard",
+      "name": "Haircut & Beard Sculpt",
+      "price": 65,
+      "duration": 60,
+      "icon": "fa-user-tie",
+      "popular": true,
+      "description": "Full signature haircut combined with complete beard shaping, hot towel treatment, and straight razor line-up."
+    },
+    {
+      "key": "beard_trim",
+      "name": "Beard Shaping & Razor Edge",
+      "price": 30,
+      "duration": 30,
+      "icon": "fa-face-smile",
+      "popular": false,
+      "description": "Detailed volumetric beard reduction, clipper shaping, mustache trimming, and crisp razor line definition."
+    },
+    {
+      "key": "straight_razor_shave",
+      "name": "Hot Towel Straight Razor Shave",
+      "price": 30,
+      "duration": 30,
+      "icon": "fa-crown",
+      "popular": true,
+      "description": "Classic hot towel facial steam, warm shaving lather, traditional straight-razor shave, and cooling balm."
+    },
+    {
+      "key": "head_shave",
+      "name": "Razor Head Shave",
+      "price": 30,
+      "duration": 30,
+      "icon": "fa-wand-magic-sparkles",
+      "popular": false,
+      "description": "Ultra-clean scalp shave with essential oil hot towels, warm lather, and razor-smooth finish."
+    },
+    {
+      "key": "kids_cut",
+      "name": "Kids Haircut (12 & Under)",
+      "price": 25,
+      "duration": 30,
+      "icon": "fa-child",
+      "popular": false,
+      "description": "Patient, gentle, and stylish scissor and clipper cut tailored for young gentlemen."
+    },
+    {
+      "key": "vip_mobile",
+      "name": "VIP Home / Hotel Haircut Service",
+      "price": 80,
+      "duration": 60,
+      "icon": "fa-car",
+      "popular": false,
+      "description": "Convenient on-location master barber service at your residence or Las Vegas Strip hotel suite."
+    }
+  ],
+  "lookbook": [
+    {
+      "id": 1,
+      "image": "assets/images/fade-textured.jpg",
+      "category": "fades",
+      "title": "Clean Razor Skin Fade",
+      "barber": "Elier (Elier_Barber)",
+      "caption": "Razor Skin Fade • Cut by Elier"
+    },
+    {
+      "id": 2,
+      "image": "assets/images/beard-shave.jpg",
+      "category": "beards",
+      "title": "Sculpted Beard & Taper",
+      "barber": "Bryan Lorenzo Otero",
+      "caption": "Sculpted Beard Contour & Razor Line • Groomed by Bryan"
+    },
+    {
+      "id": 3,
+      "image": "assets/images/hair-design.jpg",
+      "category": "tapers",
+      "title": "Low Taper & Textured Crop",
+      "barber": "Ramírez Lay Jiménez",
+      "caption": "Textured Crop & Low Drop Taper • Styled by Lay"
+    },
+    {
+      "id": 4,
+      "image": "assets/images/barber-master.jpg",
+      "category": "shaves",
+      "title": "Hot Towel Straight Razor Shave",
+      "barber": "Henry Classic V.",
+      "caption": "Classic Hot Towel Shave • Handcrafted by Henry"
+    },
+    {
+      "id": 5,
+      "image": "assets/images/kids-cut.jpg",
+      "category": "kids",
+      "title": "Kids Taper Fade",
+      "barber": "Elier (Elier_Barber)",
+      "caption": "Kids Taper Fade • Cut by Elier"
+    },
+    {
+      "id": 6,
+      "image": "assets/images/lounge-interior.jpg",
+      "category": "lounge",
+      "title": "Boulevard Barber Shop Stations",
+      "barber": "Boulevard Barber Shop",
+      "caption": "Boulevard Barber Shop • 906 S 6th St, Downtown Las Vegas"
+    }
+  ],
+  "reviews": [
+    {
+      "author": "Anthony G.",
+      "role": "Downtown Las Vegas Regular",
+      "rating": 5,
+      "date": "2 days ago",
+      "text": "Elier is hands down one of the best barbers in Vegas. The skin fade is super sharp and the straight razor shave was incredible. Clean shop, great music, and friendly atmosphere.",
+      "cut": "Male Haircut & Hot Towel Shave",
+      "barber": "Elier (Elier_Barber)"
+    },
+    {
+      "author": "Marcus T.",
+      "role": "Arts District Local",
+      "rating": 5,
+      "date": "1 week ago",
+      "text": "Bryan gave me the best beard trim and low taper Ive had in years. Attention to detail is top notch. The vibe at Boulevard Barber Shop on 6th Street is authentic old school.",
+      "cut": "Haircut & Beard Sculpt",
+      "barber": "Bryan Lorenzo Otero"
+    },
+    {
+      "author": "Carlos M.",
+      "role": "Verified Client",
+      "rating": 5,
+      "date": "2 weeks ago",
+      "text": "Lay hooked me up with a flawless drop fade and razor edge. Always prompt, professional, and consistent. Highly recommended if you want a clean cut in downtown!",
+      "cut": "Male Haircut",
+      "barber": "Ramírez Lay Jiménez"
+    },
+    {
+      "author": "Derek S.",
+      "role": "Resort Executive",
+      "rating": 5,
+      "date": "3 weeks ago",
+      "text": "Booked the VIP hotel service on the Strip and was blown away. Arrived right on time, fully equipped, and gave me a fresh cut before my conference. 5 stars all the way.",
+      "cut": "VIP Hotel Haircut Service",
+      "barber": "Elier (Elier_Barber)"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Do you accept walk-ins or are appointments required?",
+      "answer": "Walk-ins are always welcome during all regular business hours! However, to guarantee your chair and master barber without waiting, we recommend booking online in advance via Booksy."
+    },
+    {
+      "question": "Where are you located and is there parking?",
+      "answer": "We are located at 906 S 6th St #105, Las Vegas, NV 89101 near S 6th St & E Charleston Blvd in Downtown Las Vegas. Free customer parking is available on-site."
+    },
+    {
+      "question": "What payment methods do you accept?",
+      "answer": "We accept cash, major credit/debit cards, Apple Pay, Google Pay, and Booksy contactless direct pay."
+    },
+    {
+      "question": "Do you offer mobile or on-location hotel haircut services?",
+      "answer": "Yes! We offer VIP on-location haircut services for homes, offices, and Las Vegas Strip resort hotel suites. You can book our VIP mobile service directly."
+    }
+  ]
+}
