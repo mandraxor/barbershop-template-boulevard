@@ -7,10 +7,11 @@
 :root {
   --bg-cream: #F8F5EE;
   --bg-cream-dark: #EDE7DA;
-  --bg-dark: #0F1115;
+  --navy: #1A2849;
+  --barber-red: #C41E3A;
   --brass: #C5A059;
   --brass-light: #DFBA68;
-  --text-main: #18191D;
+  --text-main: #14161C;
   --text-muted: #55575E;
 }
 
@@ -57,7 +58,7 @@ body {
   letter-spacing: 0.16em;
   text-transform: uppercase;
   padding: 10px 22px;
-  border: 1px solid rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.8);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   text-decoration: none;
   cursor: pointer;
@@ -65,24 +66,24 @@ body {
 
 .btn-editorial-hero:hover {
   background: #FFFFFF;
-  color: #0F1115 !important;
+  color: #14161C !important;
   border-color: #FFFFFF;
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
 }
 
 .btn-editorial-dark {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: #0F1115;
+  background: #14161C;
   color: #FFFFFF !important;
   font-family: 'Space Mono', monospace;
   font-size: 11px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   padding: 9px 20px;
-  border: 1px solid #0F1115;
+  border: 1px solid #14161C;
   transition: all 0.25s ease;
   text-decoration: none;
   cursor: pointer;
@@ -91,9 +92,33 @@ body {
 .btn-editorial-dark:hover {
   background: #C5A059;
   border-color: #C5A059;
-  color: #0F1115 !important;
+  color: #14161C !important;
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(197, 160, 89, 0.35);
+}
+
+.btn-editorial-navy {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #1A2849;
+  color: #FFFFFF !important;
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 9px 20px;
+  border: 1px solid #1A2849;
+  transition: all 0.25s ease;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-editorial-navy:hover {
+  background: #C41E3A;
+  border-color: #C41E3A;
+  color: #FFFFFF !important;
+  transform: translateY(-2px);
 }
 
 /* Editorial Dot Leaders */
@@ -115,7 +140,19 @@ body {
 
 /* Caption Boxes */
 .caption-box-dark {
-  background: rgba(15, 17, 21, 0.92);
+  background: rgba(20, 22, 28, 0.92);
   color: #FFFFFF;
   backdrop-filter: blur(8px);
+}
+
+/* Infinite Marquee */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: 200%;
+  animation: marquee 30s linear infinite;
 }

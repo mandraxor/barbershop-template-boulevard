@@ -23,11 +23,11 @@ export default function HomePage() {
             />
             
             {/* Dark Vignette Overlay (bg-black/60) */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/55 to-black/35 z-0" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/55 to-black/35 z-0" />
 
             {/* Hero Content */}
             <div className="relative z-10 max-w-xl text-left">
-              <div className="inline-flex items-center px-3 py-1 rounded-full border border-white/30 bg-black/60 backdrop-blur-md text-[10px] font-mono text-gray-200 mb-3">
+              <div className="inline-flex items-center px-3 py-1 rounded-full border border-white/30 bg-black/65 backdrop-blur-md text-[10px] font-mono text-gray-200 mb-3">
                 <span className="w-2 h-2 rounded-full bg-emerald-400 mr-2 animate-pulse"></span>
                 <span>OPEN DAILY 7:00 AM – 7:00 PM • DOWNTOWN LAS VEGAS</span>
               </div>
@@ -57,7 +57,7 @@ export default function HomePage() {
           {/* 2. THE CURATED MENU (FLANKED BY 2 BESPOKE IMAGES) */}
           <div className="bg-[#FAF8F3] border border-black/10 p-5 sm:p-7 rounded shadow-sm">
             
-            <h2 className="font-editorial-serif text-xl sm:text-2xl font-bold text-center tracking-widest uppercase mb-6 text-[#18191D]">
+            <h2 className="font-editorial-serif text-xl sm:text-2xl font-bold text-center tracking-widest uppercase mb-6 text-[#14161C]">
               THE CURATED MENU
             </h2>
 
@@ -73,7 +73,7 @@ export default function HomePage() {
               </div>
 
               {/* Center: Typewriter / Monospace Menu with Dot Leaders */}
-              <div className="md:col-span-6 font-mono text-xs text-[#18191D] space-y-4">
+              <div className="md:col-span-6 font-mono text-xs text-[#14161C] space-y-4">
                 
                 {/* Menu Item 1 */}
                 <div>
@@ -129,23 +129,23 @@ export default function HomePage() {
             </div>
 
             <div className="mt-6 pt-4 border-t border-black/10 text-center">
-              <Link href="/services" className="text-xs font-mono text-[#8C6B1B] hover:underline font-bold uppercase tracking-wider">
+              <Link href="/services" className="text-xs font-mono text-[#1A2849] hover:underline font-bold uppercase tracking-wider">
                 View All Categories & Full Pricing Breakdown →
               </Link>
             </div>
 
           </div>
 
-          {/* 3. BOTTOM HORIZONTAL PHOTO TILES (3 SQUARES) */}
+          {/* 3. BOTTOM HORIZONTAL PHOTO TILES (3 SQUARES WITH BESPOKE GENERATED PHOTOGRAPHY) */}
           <div className="grid grid-cols-3 gap-3 sm:gap-4">
             <div className="h-32 sm:h-44 rounded overflow-hidden border border-black/10 bg-black">
-              <img src="/images/bryan-action.jpg" alt="Barber Craft" className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
+              <img src="/images/gallery-scissor.jpg" alt="Master Scissor Craft" className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
             </div>
             <div className="h-32 sm:h-44 rounded overflow-hidden border border-black/10 bg-black">
-              <img src="/images/fade-textured.jpg" alt="Fade Textured" className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
+              <img src="/images/gallery-fade.jpg" alt="Precision Skin Drop Fade" className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
             </div>
             <div className="h-32 sm:h-44 rounded overflow-hidden border border-black/10 bg-black">
-              <img src="/images/mid-drop-fade.jpg" alt="Mid Drop Fade" className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
+              <img src="/images/gallery-steam.jpg" alt="Steaming Hot Towel Shave Ritual" className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
             </div>
           </div>
 
@@ -167,7 +167,7 @@ export default function HomePage() {
             <div className="h-48 rounded overflow-hidden border border-black/10 bg-black">
               <img src="/images/razor-beard.jpg" alt="Hot Razor Lineup" className="w-full h-full object-cover" />
             </div>
-            <p className="font-editorial-serif text-sm font-semibold text-[#18191D] mt-2">Hot Razor Lineup</p>
+            <p className="font-editorial-serif text-sm font-semibold text-[#14161C] mt-2">Hot Razor Lineup</p>
           </div>
 
           {/* Bottom Insert: Master Barber in Vest with Shears */}
@@ -193,12 +193,12 @@ export default function HomePage() {
           <div className="bg-[#FAF8F3] border border-black/10 p-5 sm:p-6 rounded flex flex-col justify-between flex-grow shadow-sm">
             <div>
               
-              <h2 className="font-editorial-serif text-lg sm:text-xl font-bold tracking-widest uppercase mb-4 text-[#18191D]">
+              <h2 className="font-editorial-serif text-lg sm:text-xl font-bold tracking-widest uppercase mb-4 text-[#14161C]">
                 MEET YOUR MASTER CRAFTSMEN
               </h2>
 
               {/* Craftsmen List with Starting Rates */}
-              <div className="font-mono text-[11px] text-[#18191D] space-y-2.5 mb-6 border-b border-black/10 pb-4">
+              <div className="font-mono text-[11px] text-[#14161C] space-y-2.5 mb-6 border-b border-black/10 pb-4">
                 
                 <div className="flex items-baseline justify-between">
                   <span>Elier</span>
@@ -271,7 +271,7 @@ export default function HomePage() {
             </div>
 
             <div className="pt-4 mt-4 border-t border-black/10 text-center">
-              <Link href="/team" className="btn-editorial-dark w-full py-2.5 text-center text-xs">
+              <Link href="/team" className="btn-editorial-navy w-full py-2.5 text-center text-xs">
                 Explore Full Roster Profiles →
               </Link>
             </div>
@@ -282,7 +282,7 @@ export default function HomePage() {
           {/* 2. VISIT THE LOUNGE (LOCATION & HOURS AS PICTURED) */}
           <div className="bg-[#FAF8F3] border border-black/10 p-5 rounded shadow-sm">
             
-            <h2 className="font-editorial-serif text-base sm:text-lg font-bold tracking-widest uppercase mb-4 text-[#18191D] text-center">
+            <h2 className="font-editorial-serif text-base sm:text-lg font-bold tracking-widest uppercase mb-4 text-[#14161C] text-center">
               VISIT THE LOUNGE
             </h2>
 
@@ -290,13 +290,13 @@ export default function HomePage() {
               
               {/* Left Info Box */}
               <div className="border border-black/15 p-4 rounded bg-white text-center font-mono text-[11px] space-y-1">
-                <p className="font-bold text-xs uppercase tracking-wider text-black mb-1.5">HOURS</p>
+                <p className="font-bold text-xs uppercase tracking-wider text-[#1A2849] mb-1.5">HOURS</p>
                 <p className="text-gray-800">Monday – Sunday</p>
-                <p className="font-bold text-black">7:00 AM – 7:00 PM</p>
+                <p className="font-bold text-[#14161C]">7:00 AM – 7:00 PM</p>
                 <div className="pt-2 mt-2 border-t border-black/10 text-[10px] text-gray-700">
                   <p>906 S 6th St #105</p>
                   <p>Las Vegas, NV 89101</p>
-                  <a href="tel:7023841453" className="font-bold text-black hover:text-[#8C6B1B] block mt-1">(702) 384-1453</a>
+                  <a href="tel:7023841453" className="font-bold text-[#1A2849] hover:text-[#C41E3A] block mt-1">(702) 384-1453</a>
                 </div>
               </div>
 
@@ -316,7 +316,7 @@ export default function HomePage() {
             </div>
 
             <div className="grid grid-cols-2 gap-2 mt-3">
-              <a href="https://maps.google.com/?q=906+S+6th+St+105+Las+Vegas+NV+89101" target="_blank" rel="noopener noreferrer" className="btn-editorial-dark py-1.5 text-[10px] text-center">
+              <a href="https://maps.google.com/?q=906+S+6th+St+105+Las+Vegas+NV+89101" target="_blank" rel="noopener noreferrer" className="btn-editorial-navy py-1.5 text-[10px] text-center">
                 Google Maps
               </a>
               <a href="https://maps.apple.com/?address=906+S+6th+St+105,Las+Vegas,NV+89101" target="_blank" rel="noopener noreferrer" className="btn-editorial-dark py-1.5 text-[10px] text-center bg-gray-800">
