@@ -1,6 +1,8 @@
 'use client';
 import { useState } from 'react';
 import { MapPin, Phone, Clock, ChevronDown, ChevronUp } from 'lucide-react';
+import { FadeIn } from '@/components/MotionWrapper';
+import { motion } from 'framer-motion';
 
 export default function VisitPage() {
   const faqs = [
@@ -27,11 +29,13 @@ export default function VisitPage() {
   return (
     <main className="py-12 sm:py-20 px-3 sm:px-8 max-w-7xl mx-auto overflow-hidden">
       
-      <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-        <span className="text-[#C5A059] font-mono text-xs uppercase tracking-[0.25em] block mb-2">Downtown Las Vegas</span>
-        <h1 className="font-serif font-black text-3xl sm:text-6xl text-white uppercase tracking-tight break-words">Lounge & Location</h1>
-        <p className="text-gray-400 text-xs sm:text-sm font-mono mt-3">Historic 6th Street Commercial District (S 6th St & E Charleston Blvd)</p>
-      </div>
+      <FadeIn>
+        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+          <span className="text-[#C5A059] font-mono text-xs uppercase tracking-[0.25em] block mb-2">Downtown Las Vegas</span>
+          <h1 className="font-serif font-black text-3xl sm:text-6xl text-white uppercase tracking-tight break-words">Lounge & Location</h1>
+          <p className="text-gray-400 text-xs sm:text-sm font-mono mt-3">Historic 6th Street Commercial District (S 6th St & E Charleston Blvd)</p>
+        </div>
+      </FadeIn>
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16">
         
@@ -118,12 +122,17 @@ export default function VisitPage() {
                   className="w-full p-4 sm:p-5 text-left font-bold text-white flex justify-between items-center hover:text-[#C5A059] transition-colors"
                 >
                   <span className="pr-2">{faq.q}</span>
-                  {isOpen ? <ChevronUp className="w-4 h-4 text-[#C5A059]" /> : <ChevronDown className="w-4 h-4 text-gray-400 shrink-0" />}
+                  {isOpen ? <ChevronUp className="w-4 h-4 text-[#C5A059] shrink-0" /> : <ChevronDown className="w-4 h-4 text-gray-400 shrink-0" />}
                 </button>
                 {isOpen && (
-                  <div className="p-4 sm:p-5 pt-0 font-sans text-xs text-gray-300 leading-relaxed font-light border-t border-white/5">
+                  <motion.div 
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: 'auto' }}
+                    exit={{ opacity: 0, height: 0 }}
+                    className="p-4 sm:p-5 pt-0 font-sans text-xs text-gray-300 leading-relaxed font-light border-t border-white/5"
+                  >
                     {faq.a}
-                  </div>
+                  </motion.div>
                 )}
               </div>
             );
