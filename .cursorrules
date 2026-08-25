@@ -1,0 +1,21 @@
+# BOULEVARD BARBER SHOP — AGENT BUILD BLUEPRINT & SYSTEM MANIFEST
+
+## 1. Environment & Architecture
+- **Framework:** Next.js App Router with next/link routing. Never use hash anchors (#) for internal page transitions.
+- **Dependencies:** Framer Motion, Lucide React, React Icons, Tailwind CSS, clsx, tailwind-merge, radix-ui primitives.
+- **File Structure:** Multi-page architecture strictly required (app/layout.tsx, app/page.tsx, app/services/page.tsx, app/team/page.tsx, app/lookbook/page.tsx, app/visit/page.tsx).
+
+## 2. Luxury Aesthetic & Design System
+- **Color Palette:** 
+  - Primary Dark: #0B0D13 / #0A0D14
+  - Accent Brass / Cognac: #C5A059 (Hover: #DFBA68)
+  - Typography Tone: Bone / Off-White (#F5F5F0), Muted Slate (#94A3B8)
+- **Typography Hierarchy:**
+  - Headlines: High-contrast Serif (font-serif tracking-tight)
+  - Body: Clean geometric sans (font-sans leading-relaxed)
+  - Pricing & Badges: Crisp Monospace (font-mono)
+- **Design Directives:**
+  - BAN GENERIC BOXES: Never wrap lists, features, or team rosters in standard heavy rounded rectangle cards. Use clean 1px border lines, asymmetric layouts, or editorial separation.
+  - EDITORIAL MENUS: Structure service and menu items using 2-column layouts featuring clean flex leader lines (. . . .).
+  - CINEMATIC HERO: Heroes must occupy full-bleed viewport height (h-screen) with slow-zoom motion or ambient video loops backed by dark vignette gradients (bg-gradient-to-t).
+  - PERSISTENT UTILITY: Every page must feature quick-access action triggers (Booksy booking links and click-to-call phone numbers) in both the header and footer.

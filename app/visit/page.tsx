@@ -1,142 +1,110 @@
-'use client';
-import { useState } from 'react';
-import { MapPin, Phone, Clock, ChevronDown, ChevronUp } from 'lucide-react';
+import { MapPin, Phone, Clock, ShieldCheck, Car, Calendar } from 'lucide-react';
 import { FadeIn } from '@/components/MotionWrapper';
-import { motion } from 'framer-motion';
+
+export const metadata = {
+  title: 'Visit The Lounge & Directions | Boulevard Barber Shop',
+  description: 'Find Boulevard Barber Shop at 906 S 6th St #105, Downtown Las Vegas, NV 89101. Operating hours, parking information, and booking FAQ.',
+};
 
 export default function VisitPage() {
+  const booksyUrl = "https://booksy.com/en-us/705462_boulevard-barber-shop_barber-shop_134764_las-vegas";
+
   const faqs = [
     {
-      q: "Do you accept walk-ins?",
-      a: "Yes! Walk-ins are welcomed 7 days a week from 7:00 AM to 7:00 PM. For weekend chairs or specific master barbers, online booking on Booksy is recommended."
+      q: "Do you accept walk-in appointments?",
+      a: "Yes. Walk-in clients are welcomed 7 days a week from 7:00 AM to 7:00 PM. To avoid wait times during peak afternoon hours, we recommend booking online via Booksy."
     },
     {
-      q: "Where is parking located on 6th Street?",
-      a: "Convenient free and metered street parking is available directly in front of the shop on S 6th Street, as well as along E Charleston Blvd."
+      q: "Where should I park when visiting?",
+      a: "Dedicated guest parking is located directly in front of Suite #105 along the Historic 6th Street commercial plaza, with free street parking along 6th St and E Charleston Blvd."
     },
     {
-      q: "What payment methods do you accept?",
-      a: "We accept Cash, Apple Pay, Google Pay, Visa, Mastercard, American Express, and Discover."
+      q: "What payment methods are accepted?",
+      a: "We accept all major credit cards, debit, Apple Pay, Google Pay, Booksy direct in-app payments, and cash."
     },
     {
-      q: "Do you offer mobile or hotel suite cuts on the Las Vegas Strip?",
-      a: "Yes, our VIP on-location service is available from $80. Please call us directly at (702) 384-1453 to schedule your private session."
+      q: "How does the VIP On-Location service work?",
+      a: "Our master barbers are fully equipped to provide private haircuts and hot towel razor shaves at your residence or Las Vegas Strip hotel suite (starting from $80). Book online or call directly to schedule."
     }
   ];
 
-  const [openFaq, setOpenFaq] = useState<number | null>(0);
-
   return (
-    <main className="py-12 sm:py-20 px-3 sm:px-8 max-w-7xl mx-auto overflow-hidden">
+    <main className="py-12 sm:py-20 px-4 sm:px-8 max-w-7xl mx-auto overflow-hidden">
       
       <FadeIn>
-        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-          <span className="text-[#C5A059] font-mono text-xs uppercase tracking-[0.25em] block mb-2">Downtown Las Vegas</span>
-          <h1 className="font-cinzel font-black text-3xl sm:text-6xl text-white uppercase tracking-tight break-words">Lounge & Location</h1>
-          <p className="text-gray-400 text-xs sm:text-sm font-mono mt-3">Historic 6th Street Commercial District (S 6th St & E Charleston Blvd)</p>
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <span className="text-[#C5A059] font-mono text-xs uppercase tracking-[0.25em] block mb-2 font-semibold">Downtown Atelier</span>
+          <h1 className="font-serif font-black text-3xl sm:text-6xl text-[#F5F5F0] uppercase tracking-tight break-words">Visit The Lounge</h1>
+          <p className="text-[#94A3B8] text-xs sm:text-sm font-sans mt-3">Historic 6th Street Commercial District, Downtown Las Vegas.</p>
         </div>
       </FadeIn>
 
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-16">
         
-        {/* Left Information Card */}
-        <div className="lg:col-span-5 bg-[#10131B] border border-[#C5A059]/40 p-6 sm:p-8 rounded-lg flex flex-col justify-between shadow-2xl overflow-hidden">
-          <div>
-            <h2 className="font-cinzel font-bold text-2xl sm:text-3xl text-white mb-6">Visit Our Shop</h2>
-
-            <div className="space-y-6 text-xs sm:text-sm text-gray-300">
-              <div className="flex items-start space-x-3">
-                <MapPin className="w-5 h-5 text-[#C5A059] shrink-0 mt-0.5" />
-                <div>
-                  <p className="font-bold text-white text-base">Boulevard Barber Shop</p>
-                  <p className="text-gray-400">906 S 6th St #105, Las Vegas, NV 89101</p>
-                  <p className="text-[#DFBA68] text-xs font-mono mt-1">Between E Charleston Blvd & E Clark Ave</p>
-                </div>
+        {/* Contact & Hours Column */}
+        <div className="lg:col-span-5 space-y-8">
+          
+          <div className="border border-white/10 p-8 bg-[#080A0E] space-y-6">
+            <h2 className="font-serif text-2xl text-[#F5F5F0]">Operating Hours</h2>
+            <div className="space-y-3 font-mono text-xs">
+              <div className="flex justify-between py-2 border-b border-white/5">
+                <span className="text-[#94A3B8]">Monday – Sunday</span>
+                <span className="text-[#C5A059] font-bold">7:00 AM – 7:00 PM</span>
               </div>
+            </div>
+            <p className="text-xs text-[#94A3B8] font-sans">Open 7 days a week with active master barbers on staff every day.</p>
+          </div>
 
-              <div className="flex items-center space-x-3">
-                <Phone className="w-5 h-5 text-[#C5A059] shrink-0" />
-                <a href="tel:7023841453" className="font-bold text-white hover:text-[#DFBA68] transition-colors text-base font-mono">(702) 384-1453</a>
-              </div>
-
-              <div className="pt-6 border-t border-white/10 font-mono text-xs">
-                <p className="uppercase text-[#DFBA68] font-bold mb-2 tracking-wider flex items-center">
-                  <Clock className="w-4 h-4 mr-1.5 shrink-0" /> Operating Schedule
-                </p>
-                <div className="flex justify-between py-1.5 border-b border-white/5">
-                  <span>Monday – Sunday:</span>
-                  <span className="font-bold text-[#DFBA68]">7:00 AM – 7:00 PM</span>
-                </div>
-                <p className="text-gray-400 mt-2 text-[11px]">Open 7 days a week. Early morning & evening availability.</p>
-              </div>
+          <div className="border border-white/10 p-8 bg-[#080A0E] space-y-6">
+            <h2 className="font-serif text-2xl text-[#F5F5F0]">Lounge Address</h2>
+            <div className="space-y-2 font-mono text-xs">
+              <p className="text-[#F5F5F0] text-sm font-bold">906 S 6th St #105</p>
+              <p className="text-[#94A3B8]">Las Vegas, NV 89101</p>
+              <p className="text-[#C5A059] text-[11px]">Historic 6th St & E Charleston Blvd</p>
+            </div>
+            <div className="pt-4 border-t border-white/10 flex flex-col gap-3">
+              <a href="tel:7023841453" className="btn-brass-outline w-full py-2.5 text-xs text-center font-mono">
+                <Phone className="w-3.5 h-3.5 mr-2 text-[#C5A059]" />
+                Call (702) 384-1453
+              </a>
+              <a href={booksyUrl} target="_blank" rel="noreferrer" className="btn-brass-primary w-full py-2.5 text-xs text-center font-mono">
+                <Calendar className="w-3.5 h-3.5 mr-2" />
+                Book Online (Booksy)
+              </a>
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-3 pt-6 border-t border-white/10 mt-8 font-mono text-xs">
-            <a 
-              href="https://maps.google.com/?q=906+S+6th+St+105+Las+Vegas+NV+89101" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="btn-brass-solid py-3 text-center"
-            >
-              Google Maps
-            </a>
-            <a 
-              href="https://maps.apple.com/?address=906+S+6th+St+105,Las+Vegas,NV+89101" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="btn-brass-outline py-3 text-center"
-            >
-              Apple Maps
-            </a>
-          </div>
         </div>
 
-        {/* Right Embedded Google Map */}
-        <div className="lg:col-span-7 bg-[#10131B] border border-[#C5A059]/40 rounded-lg overflow-hidden min-h-[360px] shadow-2xl">
+        {/* Map Embed Column */}
+        <div className="lg:col-span-7 border border-white/10 overflow-hidden h-[450px] lg:h-auto min-h-[400px]">
           <iframe 
-            src="https://maps.google.com/maps?q=906%20S%206th%20St%20%23105%20Las%20Vegas%20NV%2089101&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+            src="https://maps.google.com/maps?q=906%20S%206th%20St%20%23105%20Las%20Vegas%20NV%2089101&t=&z=14&ie=UTF8&iwloc=&output=embed" 
             width="100%" 
             height="100%" 
-            style={{ border: 0, minHeight: '380px', filter: 'grayscale(0.9) invert(0.92) contrast(1.2)' }} 
+            style={{ border: 0 }} 
             allowFullScreen={true} 
             loading="lazy" 
-            referrerPolicy="no-referrer-when-downgrade"
-            title="Boulevard Barber Shop Google Map Location"
+            title="Boulevard Barber Shop Google Map"
           />
         </div>
 
       </div>
 
-      {/* Expandable FAQ Accordion */}
-      <div className="max-w-4xl mx-auto pt-10 border-t border-[#C5A059]/20">
-        <h2 className="font-cinzel font-black text-2xl sm:text-3xl text-white uppercase text-center mb-8">Frequently Asked Questions</h2>
-        
-        <div className="space-y-4 font-mono text-xs">
-          {faqs.map((faq, idx) => {
-            const isOpen = openFaq === idx;
-            return (
-              <div key={idx} className="border border-[#C5A059]/30 rounded-lg bg-[#10131B] overflow-hidden">
-                <button 
-                  onClick={() => setOpenFaq(isOpen ? null : idx)}
-                  className="w-full p-4 sm:p-5 text-left font-bold text-white flex justify-between items-center hover:text-[#DFBA68] transition-colors"
-                >
-                  <span className="pr-2">{faq.q}</span>
-                  {isOpen ? <ChevronUp className="w-4 h-4 text-[#DFBA68] shrink-0" /> : <ChevronDown className="w-4 h-4 text-gray-400 shrink-0" />}
-                </button>
-                {isOpen && (
-                  <motion.div 
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: 'auto' }}
-                    exit={{ opacity: 0, height: 0 }}
-                    className="p-4 sm:p-5 pt-0 font-sans text-xs text-gray-300 leading-relaxed font-light border-t border-white/5"
-                  >
-                    {faq.a}
-                  </motion.div>
-                )}
-              </div>
-            );
-          })}
+      {/* FAQ Accordion Section */}
+      <div className="border-t border-white/10 pt-16">
+        <div className="text-center max-w-2xl mx-auto mb-12">
+          <span className="text-xs uppercase tracking-[0.25em] text-[#C5A059] font-mono">Concierge Info</span>
+          <h2 className="text-2xl sm:text-4xl font-serif text-[#F5F5F0] mt-2">Frequently Asked Questions</h2>
+        </div>
+
+        <div className="max-w-4xl mx-auto space-y-6">
+          {faqs.map((faq, idx) => (
+            <div key={idx} className="border-b border-white/10 pb-6">
+              <h3 className="font-serif font-bold text-lg text-[#F5F5F0] mb-2">{faq.q}</h3>
+              <p className="text-xs sm:text-sm text-[#94A3B8] font-sans leading-relaxed">{faq.a}</p>
+            </div>
+          ))}
         </div>
       </div>
 
