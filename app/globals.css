@@ -2,35 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;0,900;1,500;1,600;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;0,900;1,500;1,600;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
 
 :root {
-  --font-playfair: 'Playfair Display', Georgia, serif;
-  --font-cormorant: 'Cormorant Garamond', Georgia, serif;
-  --font-jakarta: 'Plus Jakarta Sans', sans-serif;
-  --font-mono: 'Space Mono', 'Courier New', monospace;
+  --bg-obsidian: #0B0D13;
+  --brass: #C5A059;
+  --brass-light: #DFBA68;
+  --bone: #F5F5F0;
 }
 
 body {
-  background-color: #0e131f;
-  color: #F5F5F0;
-  font-family: var(--font-jakarta);
+  background-color: var(--bg-obsidian);
+  color: var(--bone);
+  font-family: 'Plus Jakarta Sans', sans-serif;
   overflow-x: hidden;
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', serif;
+}
+
+.font-serif {
+  font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-mono {
+  font-family: 'Space Mono', 'Courier New', monospace;
 }
 
 /* Metallic Brass Gradient */
 .text-brass-gradient {
-  background: linear-gradient(135deg, #FFF0C8 0%, #C5A059 50%, #8A6820 100%);
+  background: linear-gradient(135deg, #FFF5D6 0%, #DFBA68 45%, #C5A059 75%, #8E6A21 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
 }
 
 .btn-brass-solid {
-  background: linear-gradient(135deg, #F0D58C 0%, #C5A059 50%, #997529 100%);
-  color: #0E131F !important;
+  background: linear-gradient(135deg, #EBD292 0%, #C5A059 50%, #997529 100%);
+  color: #0B0D13 !important;
   font-weight: 700;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   display: inline-flex;
@@ -41,16 +53,16 @@ body {
 
 .btn-brass-solid:hover {
   transform: translateY(-2px);
-  box-shadow: 0 12px 30px -5px rgba(197, 160, 89, 0.45);
-  filter: brightness(1.08);
+  box-shadow: 0 14px 35px -5px rgba(197, 160, 89, 0.5);
+  filter: brightness(1.1);
 }
 
 .btn-brass-outline {
-  background: rgba(197, 160, 89, 0.08);
-  border: 1px solid #C5A059;
+  background: rgba(197, 160, 89, 0.05);
+  border: 1px solid rgba(197, 160, 89, 0.6);
   color: #F5F5F0 !important;
   font-weight: 700;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   transition: all 0.3s ease;
   display: inline-flex;
@@ -60,10 +72,11 @@ body {
 }
 
 .btn-brass-outline:hover {
-  background: rgba(197, 160, 89, 0.22);
+  background: rgba(197, 160, 89, 0.2);
   color: #FFFFFF !important;
   transform: translateY(-2px);
-  border-color: #E5C478;
+  border-color: #DFBA68;
+  box-shadow: 0 8px 25px -5px rgba(197, 160, 89, 0.3);
 }
 
 /* Ken Burns Slow Zoom Loop */
@@ -74,15 +87,31 @@ body {
 }
 
 .animate-ken-burns {
-  animation: kenBurnsSlow 24s ease-in-out infinite alternate;
+  animation: kenBurnsSlow 26s ease-in-out infinite alternate;
   transform-origin: center center;
 }
 
 /* Dotted Leader Line */
 .leader-dots {
   flex-grow: 1;
-  border-bottom: 1px dotted rgba(197, 160, 89, 0.4);
+  border-bottom: 1px dotted rgba(197, 160, 89, 0.45);
   margin: 0 12px;
   position: relative;
   top: -4px;
+}
+
+/* Infinite Marquee Strip */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: 200%;
+  animation: marquee 30s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
 }

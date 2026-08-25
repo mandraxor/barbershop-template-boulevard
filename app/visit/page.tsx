@@ -32,7 +32,7 @@ export default function VisitPage() {
       <FadeIn>
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
           <span className="text-[#C5A059] font-mono text-xs uppercase tracking-[0.25em] block mb-2">Downtown Las Vegas</span>
-          <h1 className="font-serif font-black text-3xl sm:text-6xl text-white uppercase tracking-tight break-words">Lounge & Location</h1>
+          <h1 className="font-cinzel font-black text-3xl sm:text-6xl text-white uppercase tracking-tight break-words">Lounge & Location</h1>
           <p className="text-gray-400 text-xs sm:text-sm font-mono mt-3">Historic 6th Street Commercial District (S 6th St & E Charleston Blvd)</p>
         </div>
       </FadeIn>
@@ -40,9 +40,9 @@ export default function VisitPage() {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16">
         
         {/* Left Information Card */}
-        <div className="lg:col-span-5 bg-[#121620] border border-[#C5A059]/40 p-6 sm:p-8 rounded-lg flex flex-col justify-between shadow-2xl overflow-hidden">
+        <div className="lg:col-span-5 bg-[#10131B] border border-[#C5A059]/40 p-6 sm:p-8 rounded-lg flex flex-col justify-between shadow-2xl overflow-hidden">
           <div>
-            <h2 className="font-serif font-bold text-2xl sm:text-3xl text-white mb-6">Visit Our Shop</h2>
+            <h2 className="font-cinzel font-bold text-2xl sm:text-3xl text-white mb-6">Visit Our Shop</h2>
 
             <div className="space-y-6 text-xs sm:text-sm text-gray-300">
               <div className="flex items-start space-x-3">
@@ -50,22 +50,22 @@ export default function VisitPage() {
                 <div>
                   <p className="font-bold text-white text-base">Boulevard Barber Shop</p>
                   <p className="text-gray-400">906 S 6th St #105, Las Vegas, NV 89101</p>
-                  <p className="text-[#C5A059] text-xs font-mono mt-1">Between E Charleston Blvd & E Clark Ave</p>
+                  <p className="text-[#DFBA68] text-xs font-mono mt-1">Between E Charleston Blvd & E Clark Ave</p>
                 </div>
               </div>
 
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-[#C5A059] shrink-0" />
-                <a href="tel:7023841453" className="font-bold text-white hover:text-[#C5A059] transition-colors text-base font-mono">(702) 384-1453</a>
+                <a href="tel:7023841453" className="font-bold text-white hover:text-[#DFBA68] transition-colors text-base font-mono">(702) 384-1453</a>
               </div>
 
               <div className="pt-6 border-t border-white/10 font-mono text-xs">
-                <p className="uppercase text-[#C5A059] font-bold mb-2 tracking-wider flex items-center">
+                <p className="uppercase text-[#DFBA68] font-bold mb-2 tracking-wider flex items-center">
                   <Clock className="w-4 h-4 mr-1.5 shrink-0" /> Operating Schedule
                 </p>
                 <div className="flex justify-between py-1.5 border-b border-white/5">
                   <span>Monday – Sunday:</span>
-                  <span className="font-bold text-[#E5C478]">7:00 AM – 7:00 PM</span>
+                  <span className="font-bold text-[#DFBA68]">7:00 AM – 7:00 PM</span>
                 </div>
                 <p className="text-gray-400 mt-2 text-[11px]">Open 7 days a week. Early morning & evening availability.</p>
               </div>
@@ -93,7 +93,7 @@ export default function VisitPage() {
         </div>
 
         {/* Right Embedded Google Map */}
-        <div className="lg:col-span-7 bg-[#121620] border border-[#C5A059]/40 rounded-lg overflow-hidden min-h-[360px] shadow-2xl">
+        <div className="lg:col-span-7 bg-[#10131B] border border-[#C5A059]/40 rounded-lg overflow-hidden min-h-[360px] shadow-2xl">
           <iframe 
             src="https://maps.google.com/maps?q=906%20S%206th%20St%20%23105%20Las%20Vegas%20NV%2089101&t=&z=15&ie=UTF8&iwloc=&output=embed" 
             width="100%" 
@@ -110,19 +110,19 @@ export default function VisitPage() {
 
       {/* Expandable FAQ Accordion */}
       <div className="max-w-4xl mx-auto pt-10 border-t border-[#C5A059]/20">
-        <h2 className="font-serif font-black text-2xl sm:text-3xl text-white uppercase text-center mb-8">Frequently Asked Questions</h2>
+        <h2 className="font-cinzel font-black text-2xl sm:text-3xl text-white uppercase text-center mb-8">Frequently Asked Questions</h2>
         
         <div className="space-y-4 font-mono text-xs">
           {faqs.map((faq, idx) => {
             const isOpen = openFaq === idx;
             return (
-              <div key={idx} className="border border-[#C5A059]/30 rounded-lg bg-[#121620] overflow-hidden">
+              <div key={idx} className="border border-[#C5A059]/30 rounded-lg bg-[#10131B] overflow-hidden">
                 <button 
                   onClick={() => setOpenFaq(isOpen ? null : idx)}
-                  className="w-full p-4 sm:p-5 text-left font-bold text-white flex justify-between items-center hover:text-[#C5A059] transition-colors"
+                  className="w-full p-4 sm:p-5 text-left font-bold text-white flex justify-between items-center hover:text-[#DFBA68] transition-colors"
                 >
                   <span className="pr-2">{faq.q}</span>
-                  {isOpen ? <ChevronUp className="w-4 h-4 text-[#C5A059] shrink-0" /> : <ChevronDown className="w-4 h-4 text-gray-400 shrink-0" />}
+                  {isOpen ? <ChevronUp className="w-4 h-4 text-[#DFBA68] shrink-0" /> : <ChevronDown className="w-4 h-4 text-gray-400 shrink-0" />}
                 </button>
                 {isOpen && (
                   <motion.div 

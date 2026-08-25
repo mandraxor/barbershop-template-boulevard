@@ -1,6 +1,9 @@
+import { Calendar } from 'lucide-react';
+import { FadeIn } from '@/components/MotionWrapper';
+
 export const metadata = {
   title: 'Visual Portfolio & Lookbook | Boulevard Barber Shop',
-  description: 'Explore signature skin fades, beard lineups, tapers, and executive salon interior shots at Boulevard Barber Shop in Downtown Las Vegas.',
+  description: 'Explore signature skin tapers, beard sculptures, textured crops, and executive salon interior shots at Boulevard Barber Shop in Downtown Las Vegas.',
 };
 
 export default function LookbookPage() {
@@ -17,32 +20,56 @@ export default function LookbookPage() {
     { title: "Young Gentleman's Clean Cut", src: "/images/kids-cut.jpg", category: "Kids Cut" },
   ];
 
+  const marqueeItems = [
+    "PRECISION SKIN TAPERS",
+    "HOT TOWEL STRAIGHT RAZOR SHAVES",
+    "BEARD SCULPTING & CONTOURING",
+    "DOWNTOWN LAS VEGAS",
+    "EXECUTIVE SCISSOR WORK",
+    "AESTHETIC DESIGNS"
+  ];
+
   return (
-    <main className="py-16 sm:py-24 px-4 sm:px-8 max-w-7xl mx-auto">
+    <main className="py-12 sm:py-20 px-3 sm:px-8 max-w-7xl mx-auto overflow-hidden">
       
-      <div className="flex flex-col md:flex-row md:items-end justify-between mb-16">
-        <div>
-          <span className="text-[#C5A059] font-mono text-xs uppercase tracking-[0.25em] block mb-2">Visual Portfolio</span>
-          <h1 className="font-serif font-black text-4xl sm:text-6xl text-white uppercase tracking-tight">The Lookbook</h1>
-          <p className="text-gray-400 text-xs sm:text-sm font-mono mt-2">Captured fresh from the chairs at 906 S 6th St.</p>
+      {/* Header */}
+      <FadeIn>
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 sm:mb-16">
+          <div>
+            <span className="text-[#C5A059] font-mono text-xs uppercase tracking-[0.25em] block mb-2">Visual Portfolio</span>
+            <h1 className="font-cinzel font-black text-3xl sm:text-6xl text-white uppercase tracking-tight break-words">The Lookbook</h1>
+            <p className="text-gray-400 text-xs sm:text-sm font-mono mt-2">Captured live from the chairs at 906 S 6th St.</p>
+          </div>
+          <a href={booksyUrl} target="_blank" rel="noopener noreferrer" className="btn-brass-solid mt-4 md:mt-0 px-6 py-2.5 text-xs font-mono">
+            Book Any Style
+          </a>
         </div>
-        <a href={booksyUrl} target="_blank" rel="noopener noreferrer" className="btn-brass-solid mt-4 md:mt-0 px-6 py-2.5 text-xs font-mono">
-          Book Any Style
-        </a>
+      </FadeIn>
+
+      {/* Infinite Horizontal Marquee Strip */}
+      <div className="w-full overflow-hidden bg-[#10131B] border-y border-[#C5A059]/30 py-3 mb-12">
+        <div className="animate-marquee whitespace-nowrap text-xs font-mono text-[#DFBA68] tracking-[0.2em] uppercase">
+          {marqueeItems.concat(marqueeItems).map((text, idx) => (
+            <span key={idx} className="mx-6 flex items-center">
+              <span className="text-gray-500 mr-4">✦</span> {text}
+            </span>
+          ))}
+        </div>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {/* Masonry / Gallery Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
         {gallery.map((item, index) => (
-          <div key={index} className="bg-[#121620] border border-[#C5A059]/30 rounded-lg overflow-hidden group cursor-pointer">
-            <div className="relative h-72 overflow-hidden bg-black">
+          <div key={index} className="bg-[#10131B] border border-[#C5A059]/30 rounded-lg overflow-hidden group cursor-pointer">
+            <div className="relative h-72 sm:h-80 overflow-hidden bg-black">
               <img 
                 src={item.src} 
                 alt={item.title} 
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4">
-                <span className="text-[10px] font-mono text-[#C5A059] uppercase tracking-wider">{item.category}</span>
-                <p className="font-serif font-bold text-sm text-white">{item.title}</p>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-5">
+                <span className="text-[10px] font-mono text-[#DFBA68] uppercase tracking-wider">{item.category}</span>
+                <p className="font-cinzel font-bold text-sm text-white">{item.title}</p>
               </div>
             </div>
           </div>
